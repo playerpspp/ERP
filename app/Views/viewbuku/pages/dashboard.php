@@ -7,7 +7,7 @@
     <div class="col-lg-12">
         <div class="card">
         <div class="card-title">
-            <p>Selamat Datang di dashboard apa yang anda ingin dilakukan?</p>
+            <p>Selamat Datang di Aplikasi Peminjaman Buku apa yang anda ingin dilakukan?</p>
             </div>
 
         <div class="card-body">
@@ -21,14 +21,6 @@
         </div>
 
     </div>
-
-   
-
-
-
-
-
-
 
 </div>
 

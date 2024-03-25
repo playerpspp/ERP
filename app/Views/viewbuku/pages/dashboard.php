@@ -1,13 +1,13 @@
-<?= view('layout/header')?>
+<?= view('viewbuku/layout/header')?>
 
-<?= view('layout/nav')?>
+<?= view('viewbuku/layout/nav')?>
 
 <div class="row">
 
     <div class="col-lg-12">
         <div class="card">
         <div class="card-title">
-            <p>Selamat Datang di Aplikasi Peminjaman Buku apa yang anda ingin dilakukan?</p>
+            <p>Selamat Datang di dashboard apa yang anda ingin dilakukan?</p>
             </div>
 
         <div class="card-body">
@@ -22,8 +22,16 @@
 
     </div>
 
+   
+
+
+
+
+
+
+
 </div>
 
 
-<?= view('layout/footer')?>
+<?= view('viewbuku/layout/footer')?>
 

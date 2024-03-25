@@ -13,7 +13,7 @@
                     <li><a class="sidebar-sub-toggle"><i class="ti-user"></i> User <span
                         class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                        <li><a href="<?= base_url('/pengawai')?>">Pengawai</a></li>
+                        <li><a href="<?= base_url('/petugas')?>">petugas</a></li>
                         <li><a href="<?= base_url('/peminjam')?>">Peminjam</a></li>
                      </ul>
                  </li>

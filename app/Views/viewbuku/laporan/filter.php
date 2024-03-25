@@ -1,6 +1,6 @@
-<?= view('layout/header')?>
+<?= view('viewbuku/layout/header')?>
 
-<?= view('layout/nav')?>
+<?= view('viewbuku/layout/nav')?>
 
 
 <div class="content-wrap">
@@ -66,4 +66,4 @@ function generatePrintBuku() {
 
 </script>
 
-<?= view('layout/footer')?>
+<?= view('viewbuku/layout/footer')?>

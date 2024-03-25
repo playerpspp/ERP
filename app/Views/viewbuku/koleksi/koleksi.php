@@ -1,6 +1,6 @@
-<?= view('layout/header')?>
+<?= view('viewbuku/layout/header')?>
 
-<?= view('layout/nav')?>
+<?= view('viewbuku/layout/nav')?>
 
 <div class="row">
 
@@ -74,5 +74,5 @@
 </div>
 
 
-<?= view('layout/footer')?>
+<?= view('viewbuku/layout/footer')?>
 

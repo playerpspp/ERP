@@ -1,6 +1,6 @@
-<?= view('layout/header')?>
+<?= view('viewbuku/layout/header')?>
 
-<?= view('layout/nav')?>
+<?= view('viewbuku/layout/nav')?>
 
 <head>
     <style type="text/css">
@@ -76,4 +76,4 @@
 
 
 
-<?= view('layout/footer')?>
+<?= view('viewbuku/layout/footer')?>

@@ -1,4 +1,4 @@
-<?= view('layout/header')?>
+<?= view('viewbuku/layout/header')?>
 
 
 <div class="unix-login">
@@ -34,4 +34,4 @@
   </div>
 </div>
 
-<?= view('layout/footer')?>
+<?= view('viewbuku/layout/footer')?>

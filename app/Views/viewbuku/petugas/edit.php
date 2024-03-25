@@ -7,14 +7,14 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
     <div class="card">
         <div class="card-body">
-        <a href="<?= base_url('/peminjam')?>" class="btn btn-primary">Kembali</a></button>
+        <a href="<?= base_url('/petugas')?>" class="btn btn-primary">Kembali</a></button>
             <div class="basic-form">
-                <form id="userForm" class="form-horizontal form-label-left" novalidate  action="<?= base_url('peminjam/aksi_edit')?>" method="post">
+                <form id="userForm" class="form-horizontal form-label-left" novalidate  action="<?= base_url('petugas/aksi_edit')?>" method="post">
                  <input type="hidden" name="id" value="<?= $data->id_user ?>">
 
                  <div class="row">
                     <div class="mb-3 col-md-6">
-                        <label class="form-label">Nama Peminjam<span style="color: red;">*</span></label>
+                        <label class="form-label">Nama Pegawai<span style="color: red;">*</span></label>
                         <input type="text" id="nama_pegawai" name="nama_pegawai" 
                         class="form-control text-capitalize" placeholder="Nama Pegawai" value="<?= $data->namaLengkap?>">
                     </div>
@@ -30,7 +30,15 @@
                     </div>
 
               
-                   
+                    <div class="mb-3 col-md-6">
+                    <label class="form-label">Level<span style="color: red;">*</span></label>
+                    <div class="col-12">
+                        <select id="level" class="form-control col-12" name="level" required="required">
+                            <option value="admin" selected>Admin</option>
+                            <option value="petugas">Petugas</option>
+                      </select>
+                  </div>
+              </div>
           </div>
          
           <button type="submit" id="updateButton" class="btn btn-success">Edit Data</button>

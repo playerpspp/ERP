@@ -7,12 +7,12 @@
     <div class="col-lg-12">
         <div class="card">
         <div class="card-title">
-            <p>Tabel Peminjam</p>
+            <p>Tabel petugas</p>
             </div>
 
         <div class="card-body">
-        <a href="<?= base_url('/peminjam/input_pengawai')?>"> <button type="button" class="btn btn-success" >
-										Tambah Peminjam
+        <a href="<?= base_url('/petugas/input_petugas')?>"> <button type="button" class="btn btn-success" >
+										Tambah petugas
 									</button> </a>
         <table id="bootstrap-data-table" class="table table-striped table-bordered">					<thead>
 						<tr>
@@ -21,6 +21,7 @@
 							<th style="text-align: center;" width="1000px">Email</th>
 							<th style="text-align: center;" width="1000px">Alamat</th>
 							<th style="text-align: center;" width="1000px">Username</th>
+							<th style="text-align: center;" width="1000px">Level</th>
 							<th style="text-align: center;" width="1300px">Action</th>
 						</tr>
 					</thead>
@@ -34,15 +35,16 @@
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->email ?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->alamat ?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->username ?></td>
+							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->level ?></td>
 							<td>
 							<div class="text-center mb-1">
-                               <a href="<?= base_url('/peminjam/reset_password/'.$dataa->id_user)?>"> <button type="button" class="btn btn-info" >
+                               <a href="<?= base_url('/petugas/reset_password/'.$dataa->id_user)?>"> <button type="button" class="btn btn-info" >
 										Reset Password
 									</button> </a>
-									<a href="<?= base_url('/peminjam/edit/'.$dataa->id_user) ?>" class="btn btn-warning">
+									<a href="<?= base_url('/petugas/edit/'.$dataa->id_user) ?>" class="btn btn-warning">
 										Edit
 									</a>
-									<a href="<?= base_url('/peminjam/hapus/'.$dataa->id_user)?>"><button type="button" class="btn btn-danger" >
+									<a href="<?= base_url('/petugas/hapus/'.$dataa->id_user)?>"><button type="button" class="btn btn-danger" >
 										Delete
 									</button> </a>
 							</div>

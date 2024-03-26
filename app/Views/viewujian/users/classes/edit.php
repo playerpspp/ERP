@@ -1,6 +1,6 @@
-<?= view('head'); ?>
+<?= view('viewujian/head'); ?>
 
-<?= view('nav'); ?>
+<?= view('viewujian/nav'); ?>
 
 <head>
     <title>Edit Class <?= $class->class_name  ?> </title>
@@ -42,4 +42,4 @@
             </div>
         </div>
     </div>
-    <?= view('footer'); ?>
+    <?= view('viewujian/footer'); ?>

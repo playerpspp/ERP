@@ -1,6 +1,6 @@
-<?= view('head'); ?>
+<?= view('viewujian/head'); ?>
 
-<?= view('nav'); ?>
+<?= view('viewujian/nav'); ?>
 <head>
     <title>Exams Table</title>
     <link href="/css/lib/jsgrid/jsgrid-theme.min.css" rel="stylesheet" />
@@ -68,4 +68,4 @@
 </div>
 
 
-<?= view('footer'); ?>
+<?= view('viewujian/footer'); ?>

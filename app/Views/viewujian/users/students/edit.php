@@ -1,6 +1,6 @@
-<?= view('head'); ?>
+<?= view('viewujian/head'); ?>
 
-<?= view('nav'); ?>
+<?= view('viewujian/nav'); ?>
 
 <head>
     <title>Edit Student <?= $student->student_name  ?> </title>
@@ -53,4 +53,4 @@
             </div>
         </div>
     </div>
-    <?= view('footer'); ?>
+    <?= view('viewujian/footer'); ?>

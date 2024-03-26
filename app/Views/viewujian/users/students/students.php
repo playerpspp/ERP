@@ -1,6 +1,6 @@
-<?= view('head'); ?>
+<?= view('viewujian/head'); ?>
 
-<?= view('nav'); ?>
+<?= view('viewujian/nav'); ?>
 
 <head>
 	<title>Students Table</title>
@@ -66,4 +66,4 @@
 
 
 
-	<?= view('footer'); ?>
+	<?= view('viewujian/footer'); ?>

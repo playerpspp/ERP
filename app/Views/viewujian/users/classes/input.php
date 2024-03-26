@@ -1,6 +1,6 @@
-<?= view('head'); ?>
+<?= view('viewujian/head'); ?>
 
-<?= view('nav'); ?>
+<?= view('viewujian/nav'); ?>
 
 <head>
     <title>New Class</title>
@@ -51,4 +51,4 @@
             </div>
         </div>
     </div>
-    <?= view('footer'); ?>
+    <?= view('viewujian/footer'); ?>

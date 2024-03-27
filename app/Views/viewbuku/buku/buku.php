@@ -11,7 +11,7 @@
             </div>
 
         <div class="card-body">
-			<?php  if(session()->get('level')!= "peminjam"){ ?>
+			<?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
         <a href="<?= base_url('/buku/input')?>"> <button type="button" class="btn btn-success" >
 										Tambah buku
 									</button> </a>
@@ -52,7 +52,7 @@
                             <a href="<?= base_url('/buku/Ulasan/'.$dataa->bukuID) ?>" class="btn btn-primary">
 										Ulasan
 									</a>
-									<?php  if(session()->get('level')== "peminjam"){ ?>
+									<?php  if(session()->get('role')== "student"){ ?>
 									<?php if(empty($koleksi[$dataa->bukuID])) {?>
 									<a href="<?= base_url('/koleksi/tambahKoleksi/'.$dataa->bukuID) ?>" class="btn btn-info">
 										Masukan Ke Koleksi
@@ -62,7 +62,7 @@
 										hapus dari Koleksi
 									</a>
 									<?php } } ?>
-									<?php  if(session()->get('level')!= "peminjam"){ ?>
+									<?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
 									<a href="<?= base_url('/buku/edit/'.$dataa->bukuID) ?>" class="btn btn-warning">
 										Edit
 									</a>

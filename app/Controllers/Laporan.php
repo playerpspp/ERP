@@ -11,8 +11,8 @@ class Laporan extends BaseController
     protected function checkAuth()
     {
         $id_user = session()->get('id');
-        $level = session()->get('level');
-        if ($id_user != null && $level != 'peminjam') {
+        $role = session()->get('role');
+        if ($id_user != null && $role != 'peminjam') {
             return true;
         } else {
             return false;

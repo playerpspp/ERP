@@ -4,14 +4,14 @@
       <h2>Ganti Profil</h2>
       <ul class="nav navbar-right panel_toolbox">
         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-        </li><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        </li>
         <li><a class="close-link"><i class="fa fa-close"></i></a>
         </li>
       </ul>
       <div class="clearfix"></div>
     </div>
     <div class="x_content">
-      <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+      
       <form class="form-horizontal form-label-left" enctype="multipart/form-data" method="post" action="<?= base_url('/home/aksi_ganti_profil')?>">
         <div class="item form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12">Foto Profil Baru 
@@ -21,7 +21,7 @@
           </div>
         </div>
 
-        <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        
         <div class="item form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12" >Nama Karyawan<span class="required">*</span>
           </label>
@@ -29,7 +29,7 @@
             <input type="text" id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" required="required" placeholder="Nama" value="<?= $karkar->nama ?>">
           </div>
         </div>
-        <div class="item form-group"><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        <div class="item form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12" >Jenis Kelamin <span class="required">*</span>
           </label>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -66,4 +66,3 @@
     </div>
   </div>
 </div>
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->

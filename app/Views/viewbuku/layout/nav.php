@@ -3,13 +3,13 @@
         <div class="nano-content">
             <ul>
                 <div class="logo"><a href="index.html">
-                    <!-- <img src="images/logo.png" alt="" /> --><span>Perpustakaan Digital</span></a></div>
+                    <!-- <img src="images/logo.png" alt="" /> --><span>Perpustakaan Sekolah</span></a></div>
                     <li class="label">Dashboard</li>
                     <li><a href="/home/dashboard"><i class="ti-dashboard"></i> Dashboard </a></li>
                     <br>
                     <li class="label">Features</li>
                     
-                    <?php  if(session()->get('level')== 'admin'){ ?>
+                    <?php  if(session()->get('role')== 'admin'){ ?>
                     <li><a class="sidebar-sub-toggle"><i class="ti-user"></i> User <span
                         class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
@@ -24,10 +24,10 @@
                     class="sidebar-collapse-icon ti-angle-down"></span></a>
                     <ul>
                     <li><a href="<?= base_url('/buku')?>">Daftar Buku</a></li>
-                     <?php  if(session()->get('level')== "admin"){ ?>
+                     <?php  if(session()->get('role')== "admin"){ ?>
                     <li><a href="<?= base_url('/Kategori')?>">Kategori Buku</a></li>
                     <?php }?>
-                    <?php  if(session()->get('level')== "peminjam"){ ?>
+                    <?php  if(session()->get('role')== "student"){ ?>
                     <li><a href="<?= base_url('/koleksi')?>">Koleksi Buku</a></li>
                     <?php }?>
                     <li><a href="<?= base_url('/peminjaman')?>">Peminjaman Buku</a></li>
@@ -36,7 +36,7 @@
                 </li>
                
 
-               <?php  if(session()->get('level')!= "peminjam"){ ?>
+               <?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
 
                 <li class="label">Laporan</li>
               <li><a href="/laporan"><i class="ti-book"></i> Laporan</a></li>

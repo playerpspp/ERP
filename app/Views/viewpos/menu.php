@@ -9,7 +9,7 @@
                     <br>
                     <li class="label">Features</li>
                
-                <?php  if(session()->get('level')== "admin" ||session()->get('level')=="petugas" ) { ?>                      
+                <?php  if(session()->get('role')== "admin" ||session()->get('role')=="petugas" ) { ?>                      
                       <li><a class="sidebar-sub-toggle"><i class="ti-server"></i> Data <span
                           class="sidebar-collapse-icon ti-angle-down"></span></a>
                           <ul>
@@ -23,7 +23,7 @@
 
                
 
-                <?php  if(session()->get('level')== "admin" ||session()->get('level')=="petugas" ) { ?>
+                <?php  if(session()->get('role')== "admin" ) { ?>
 
                 <li><a class="sidebar-sub-toggle"><i class="ti-book"></i> Laporan <span
                     class="sidebar-collapse-icon ti-angle-down"></span></a>

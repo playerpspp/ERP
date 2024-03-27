@@ -7,7 +7,7 @@
 </div>
 
  <table id="datatable-buttons" align="center" border="1" align="center" width="80%" class="table table-striped table-bordered">
-  <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+  
   <thead>
     <tr>
       <th>No</th>
@@ -19,7 +19,7 @@
     </tr>
   </thead>
 
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+
   <tbody>
     <?php
     $no=1;
@@ -37,7 +37,7 @@
   </tbody>
 </table>
 </div>
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+
 <script>
   window.print();
 </script>

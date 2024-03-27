@@ -1,4 +1,4 @@
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="x_panel">
     <div class="x_title">
@@ -21,7 +21,7 @@
       <div class="clearfix"></div>
     </div>
     <div class="x_content">
-        <?php if(session()->get('level')== 1) { ?>
+        <?php if(session()->get('role')== "admin") { ?>
       <a href="<?= base_url('/home/tambah_bm/')?>"><button class="btn btn-success"><i class="fa fa-plus"></i></button></a>
        <?php }else{} ?>
       <table id="datatable-buttons" class="table table-striped table-bordered">
@@ -33,13 +33,13 @@
             <th>Harga</th>
             <th>Nama Supplier</th>
             <th>Tanggal</th>
-             <?php if(session()->get('level')== 1) { ?>
+             <?php if(session()->get('role')== "admin") { ?>
             <th>action</th>
              <?php }else{} ?>
           </tr>
         </thead>
 
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+
         <tbody>
           <?php
           $no=1;
@@ -52,7 +52,7 @@
               <td><?php echo $gas->harga?></td>
               <td><?php echo $gas->nama_supp?></td>
               <td><?php echo $gas->tanggal?></td>
-               <?php if(session()->get('level')== 1) { ?>
+               <?php if(session()->get('role')== "admin") { ?>
               <td>
                 <a href="<?= base_url('/home/hapus_bm/'.$gas->id_msk)?>"><button class="btn btn-danger"><i class="fa fa-trash"></i></button></a>
               </td>
@@ -64,4 +64,3 @@
     </div>
   </div>
 </div>
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->

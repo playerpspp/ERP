@@ -9,7 +9,7 @@ class Peminjaman extends BaseController
     protected function checkAuth()
     {
         $id_user = session()->get('id');
-        $level = session()->get('level');
+        $role = session()->get('role');
         if ($id_user != null) {
             return true;
         } else {
@@ -26,7 +26,7 @@ class Peminjaman extends BaseController
         $model = new M_model();
         $on="peminjaman.bukuID_peminjaman=buku.bukuID";
         $on2="peminjaman.userID=user.id_user";
-        if(session()->get('level') != "peminjam"){
+        if(session()->get('role') != "peminjam"){
         $data['data']= $model->super('peminjaman','buku','user',$on,$on2);
         }else{
             $data['data']= $model->super_w('peminjaman','buku','user',$on,$on2, ['userID' => session()->get('id')]);
@@ -45,7 +45,7 @@ class Peminjaman extends BaseController
         $model = new M_model();
         $on="buku.bukuID=peminjaman.bukuID_peminjaman";
         $data['data']= $model->tampil('buku');
-        $data['peminjam']= $model->getWhere('user',['level' => "peminjam"]);
+        $data['peminjam']= $model->getWhere('user',['role' => "peminjam"]);
         // print_r($data);
         echo view('viewbuku/peminjaman/input',$data);
     }

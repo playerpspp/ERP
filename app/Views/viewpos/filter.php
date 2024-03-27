@@ -1,7 +1,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="x_panel">
     <div class="x_title">
-      <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+      
       <h2>
         <?php if ($kunci=='view_b') {
           echo "Laporan Barang";
@@ -30,7 +30,7 @@
       <div class="clearfix"></div>
     </div>
     <div class="x_content">
-      <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+      
       <form class="form-horizontal form-label-left" novalidate
 
       action="
@@ -63,10 +63,10 @@
       </div>
     </div>
   </form>
-      <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+      
 
   <div class="ln_solid"></div>
-      <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+      
 
   <form class="form-horizontal form-label-left" novalidate
 
@@ -100,10 +100,10 @@
   </div>
 </div>
 </form>
-      <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+      
 
 <div class="ln_solid"></div>
-      <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+      
 
 <form class="form-horizontal form-label-left" novalidate
 
@@ -141,7 +141,7 @@ action="
 
 <button onclick="history.back()" class="btn btn-primary"><i class="fa fa-undo"></i> </button>
 
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+
 </div>
 </div>
 </div>

@@ -1,4 +1,4 @@
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="x_panel">
     <div class="x_title">
@@ -19,9 +19,9 @@
         </li>
       </ul>
       <div class="clearfix"></div>
-    </div><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+    </div>
     <div class="x_content">
-      <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+      
       <a href="<?= base_url('/home/tambah_k/')?>"><button class="btn btn-success"><i class="fa fa-plus"></i></button></a>
       <table id="datatable-buttons" class="table table-striped table-bordered">
         <thead>
@@ -34,7 +34,7 @@
             <th>action</th>
           </tr>
         </thead>
-        <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        
         <tbody>
           <?php
           $no=1;

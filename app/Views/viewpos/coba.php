@@ -11,7 +11,7 @@
           </div>
         </div>      
       <div class="ln_solid"></div>
-        <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        
         <div class="item form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12">Password Baru 
           </label>
@@ -24,7 +24,7 @@
           </div>
         </div>
       <div class="ln_solid"></div>
-      <div class="item form-group"><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+      <div class="item form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12" >Jenis Kelamin 
           </label>
           <div class="col-md-6 col-sm-6 col-xs-12">

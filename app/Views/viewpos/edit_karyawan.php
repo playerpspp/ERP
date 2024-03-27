@@ -4,7 +4,7 @@
       <h2>Karyawan </h2>
       <ul class="nav navbar-right panel_toolbox">
         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-        </li><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
           <ul class="dropdown-menu" role="menu">
@@ -20,10 +20,10 @@
       <div class="clearfix"></div>
     </div>
     <div class="x_content">
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+
       <form class="form-horizontal form-label-left" novalidate  action="<?= base_url('home/aksi_edit_karyawan')?>" method="post">
         <input type="hidden" name="id" value="<?= $duar->id_user ?>">
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+
         <div class="item form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12" >Nama Karyawan<span class="required">*</span>
           </label>
@@ -31,7 +31,7 @@
             <input type="text" id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="name" required="required" placeholder="Nama" value="<?= $duar->nama ?>">
           </div>
         </div>
-        <div class="item form-group"><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        <div class="item form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12" >Jenis Kelamin <span class="required">*</span>
           </label>
           <div class="col-md-6 col-sm-6 col-xs-12">
@@ -63,7 +63,7 @@
             <input type="text" id="pass" name="pass" placeholder="Password" required="required" class="form-control col-md-7 col-xs-12" value="">
           </div>
         </div>
-        <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        
         <div class="ln_solid"></div>
         <div class="form-group">
           <div class="col-md-6 col-md-offset-3">
@@ -75,4 +75,3 @@
     </div>
   </div>
 </div>
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->

@@ -1,15 +1,15 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
   <div class="x_panel">
-    <div class="x_title"><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+    <div class="x_title">
       <h2>Edit Barang</h2>
       <ul class="nav navbar-right panel_toolbox">
         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-        </li><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        </li>
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
           <ul class="dropdown-menu" role="menu">
             <li><a href="#">Settings 1</a>
-            </li><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+            </li>
             <li><a href="#">Settings 2</a>
             </li>
           </ul>
@@ -20,7 +20,7 @@
       <div class="clearfix"></div>
     </div>
     <div class="x_content">
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+
       <form class="form-horizontal form-label-left" novalidate  action="<?= base_url('home/aksi_edit_b')?>" method="post">
 
         <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
@@ -49,7 +49,7 @@
             <input type="text" id="harga" name="harga" placeholder="Harga" required="required" class="form-control col-md-7 col-xs-12" value="<?= $gas->harga?>">
           </div>
         </div>
-        <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        
       </div>
       <div class="ln_solid"></div>
       <div class="form-group">
@@ -59,6 +59,6 @@
         </div>
       </div>
     </form>
-  </div><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+  </div>
 </div>
 </div>

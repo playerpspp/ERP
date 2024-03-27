@@ -9,8 +9,8 @@ class Petugas extends BaseController
     protected function checkAuth()
     {
         $id_user = session()->get('id');
-        $level = session()->get('level');
-        if ($id_user != null && $level == 'admin') {
+        $role = session()->get('role');
+        if ($id_user != null && $role == 'admin') {
             return true;
         } else {
             return false;
@@ -24,7 +24,7 @@ class Petugas extends BaseController
         }
 
         $model = new M_model();
-        $data['data']= $model->getWhere('user',['level !=' => 'peminjam']);
+        $data['data']= $model->getWhere('user',['role !=' => 'peminjam']);
         echo view('viewbuku/petugas/petugas',$data);
     }
 
@@ -49,13 +49,13 @@ class Petugas extends BaseController
         $email=$this->request->getPost('email');
         $alamat=$this->request->getPost('alamat');
         $username=$this->request->getPost('username');
-        $level=$this->request->getPost('level');
+        $role=$this->request->getPost('role');
         $maker_pegawai=session()->get('id');
 
         $user=array(
             'username'=>$username,
             'password'=>md5('halo#12345'),
-            'level'=>$level,
+            'role'=>$role,
             'alamat'=>$alamat,
             'email'=>$email,
             'namaLengkap'=> $namaLengkap
@@ -97,13 +97,13 @@ class Petugas extends BaseController
         $email=$this->request->getPost('email');
         $alamat=$this->request->getPost('alamat');
         $username=$this->request->getPost('username');
-        $level=$this->request->getPost('level');
+        $role=$this->request->getPost('role');
         $maker_pegawai=session()->get('id');
 
         $where=array('id_user'=>$id);    
        
             $user=array(
-            'level'=>$level,
+            'role'=>$role,
             'alamat'=>$alamat,
             'email'=>$email,
             'namaLengkap'=> $namaLengkap

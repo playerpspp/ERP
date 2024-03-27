@@ -9,7 +9,7 @@ class BukuController extends BaseController
     protected function checkAuth()
     {
         $id_user = session()->get('id');
-        $level = session()->get('level');
+        $role = session()->get('role');
         if ($id_user != null) {
             return true;
         } else {

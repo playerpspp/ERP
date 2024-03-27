@@ -15,9 +15,9 @@ class Inventaris extends BaseController
     protected function checkAuth($lock)
 {
     $id_user = session()->get('id_user');
-    $level = session()->get('role');
+    $role = session()->get('role');
 
-    if ($level == 'admin') {
+    if ($role == 'admin') {
         return true; // Admin can access anything
     }
 
@@ -26,7 +26,7 @@ class Inventaris extends BaseController
         case 'teacher':
         case 'petugas':
         case 'student':
-            if ($id_user != null && $level == $lock) {
+            if ($id_user != null && $role == $lock) {
                 return true;
             } else {
                 return false;
@@ -201,8 +201,8 @@ public function tambah_bm()
 
 public function tambah_trans()
 {
-    if(session()->get('level')== 4) {
-        return redirect()->to('/Inventaris/dashboard');
+    if (!$this->checkAuth("everyone")) {
+        return redirect()->to(base_url('/Inventaris'));
     }
 
         $model=new M_model();

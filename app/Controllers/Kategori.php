@@ -9,8 +9,8 @@ class Kategori extends BaseController
     protected function checkAuth()
     {
         $id_user = session()->get('id');
-        $level = session()->get('level');
-        if ($id_user != null && $level == 'admin') {
+        $role = session()->get('role');
+        if ($id_user != null && $role == 'admin') {
             return true;
         } else {
             return false;

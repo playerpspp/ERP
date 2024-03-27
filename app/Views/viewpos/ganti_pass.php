@@ -4,17 +4,17 @@
       <h2>Ganti Profil</h2>
       <ul class="nav navbar-right panel_toolbox">
         <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-        </li><!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        </li>
         <li><a class="close-link"><i class="fa fa-close"></i></a>
         </li>
       </ul>
       <div class="clearfix"></div>
     </div>
     <div class="x_content">
-      <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+      
       <form class="form-horizontal form-label-left" novalidate  action="<?= base_url('home/aksi_ganti_password')?>" method="post">
 
-        <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+        
         <div class="item form-group">
           <label class="control-label col-md-3 col-sm-3 col-xs-12">Password Baru 
           </label>
@@ -32,4 +32,3 @@
     </div>
   </div>
 </div>
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->

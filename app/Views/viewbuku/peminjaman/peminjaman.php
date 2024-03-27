@@ -11,12 +11,12 @@
             </div>
 
         <div class="card-body">
-			<?php  if(session()->get('level')!= "peminjam"){ ?>
+			<?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
         <a href="<?= base_url('/peminjaman/input')?>"> <button type="button" class="btn btn-success" >
 										Tambah Peminjaman
 									</button> </a>
 									<?php } ?>
-		<?php  if(session()->get('level')!= "peminjam"){ ?>
+		<?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
         <table id="bootstrap-data-table-export" class="table table-striped table-bordered">	
 		<?php  }else{?>	
 			<table id="bootstrap-data-table" class="table table-striped table-bordered">	

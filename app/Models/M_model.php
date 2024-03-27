@@ -11,6 +11,27 @@ class M_model extends model
 		return $this->db->table($table)->get()->getResult();
 	}
 
+	public function hapus($table, $where)
+	{
+		return $this->db->table($table)->delete($where);
+	}
+
+	public function simpan($table, $data)
+	{
+		return $this->db->table($table)->insert($data);
+	}
+
+	public function simpanID($table, $data)
+	{
+		$this->db->table($table)->insert($data);
+		return $this->db->insertID();
+	}
+
+	public function edit($table, $data, $where)
+	{
+		return $this->db->table($table)->update($data, $where);
+	}
+
 	public function like ($table, $where)
 	{
 		return $this->db->table($table)->like($where)->get()->getResult();
@@ -74,21 +95,7 @@ class M_model extends model
 			")->getResult();
 	}
 
-	public function hapus($table, $where)
-	{
-		return $this->db->table($table)->delete($where);
-	}
 
-	public function simpan($table, $data)
-	{
-		return $this->db->table($table)->insert($data);
-	}
-
-	public function simpanID($table, $data)
-	{
-		$this->db->table($table)->insert($data);
-		return $this->db->insertID();
-	}
 
 	public function getWhereKey($table, $where,$key)
 	{
@@ -199,7 +206,7 @@ class M_model extends model
 
 	public function whereIncount($table, $where, $column)
 	{
-		return $this->db->table($table)->whereIn($where)->count($column);
+		// return $this->db->table($table)->whereIn($where)->count($column);
 	}
 
 	public function getwhereIn($table, $column, $whereIn)
@@ -227,10 +234,7 @@ class M_model extends model
 		return $this->db->table($table)->getWhere($where)->getRow();
 	}
 
-	public function edit($table, $data, $where)
-	{
-		return $this->db->table($table)->update($data, $where);
-	}
+
 
 	public function getarray($table, $where)
 	{
@@ -239,7 +243,7 @@ class M_model extends model
 
 	public function getarray_f($table, $where)
 	{
-		return $this->db->table($table)->getWhere($where)->orderBy('created_at','DESC')->get()->getRowArray();
+		// return $this->db->table($table)->getWhere($where)->orderBy('created_at','DESC')->get()->getRowArray();
 	}
 
 	public function countStudentsPerClass()

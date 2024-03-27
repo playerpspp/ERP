@@ -9,7 +9,7 @@ class Log extends BaseController
     protected function checkAuth()
     {
         $id_user = session()->get('id');
-        $level = session()->get('level');
+        $role = session()->get('role');
         if ($id_user != null) {
             return true;
         } else {
@@ -23,7 +23,7 @@ class Log extends BaseController
         }
         $model= new M_model();
         $on='log.log_idUser=user.id_user';
-        if(session()->get('level')!= "peminjam"){
+        if(session()->get('role')!= "peminjam"){
            
             $data['data']= $model->fusionDESC('log','user',$on);
             }else{

@@ -7,7 +7,7 @@
 </div>
 
 <table id="datatable-buttons" align="center" border="1" width="80%" class="table table-striped table-bordered">
-  <!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+  
   <thead>
     <tr>
       <th>No</th>
@@ -39,7 +39,7 @@
   </tbody>
 </table>
 </div>
-<!-- //Copyrighted by @playerpspp (Octarianto Lika NG) -->
+
 <script>
   window.print();
 </script>

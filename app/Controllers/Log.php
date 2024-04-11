@@ -22,12 +22,12 @@ class Log extends BaseController
             return redirect()->to(base_url('/home/dashboard'));
         }
         $model= new M_model();
-        $on='log.log_idUser=user.id_user';
-        if(session()->get('role')!= "peminjam"){
+        $on='log.log_idUser=users.id_user';
+        if(session()->get('role')== "admin"){
            
-            $data['data']= $model->fusionDESC('log','user',$on);
+            $data['data']= $model->fusionDESC('log','users',$on);
             }else{
-                $data['data']=$model->fusion_wDESC('log','user',$on, ['log.log_idUser' => session()->get('id')]);
+                $data['data']=$model->fusion_wDESC('log','users',$on, ['log.log_idUser' => session()->get('id')]);
             }
        
 

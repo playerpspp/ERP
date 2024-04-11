@@ -29,7 +29,7 @@ class Laporan extends BaseController
 
         $id=session()->get('id');
         $where=array('id_user'=>$id);
-        $data['foto']=$model->getRow('user',$where);
+        $data['foto']=$model->getRow('users',$where);
 
         echo view('viewbuku/laporan/filter');
 

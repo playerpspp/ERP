@@ -58,7 +58,7 @@ public function index()
         $data['b']=$model->tampil('barang');
         $data['bm']=$model->tampil('barang_masuk');
         $data['p']=$model->tampil('transaksi');
-        $data['user']=$model->tampil('user');
+        $data['user']=$model->tampil('users');
         $data['karyawan']=$model->tampil('karyawan');
 
 

@@ -25,11 +25,11 @@ class Peminjaman extends BaseController
 
         $model = new M_model();
         $on="peminjaman.bukuID_peminjaman=buku.bukuID";
-        $on2="peminjaman.userID=user.id_user";
+        $on2="peminjaman.userID=users.id_user";
         if(session()->get('role') != "peminjam"){
-        $data['data']= $model->super('peminjaman','buku','user',$on,$on2);
+        $data['data']= $model->super('peminjaman','buku','users',$on,$on2);
         }else{
-            $data['data']= $model->super_w('peminjaman','buku','user',$on,$on2, ['userID' => session()->get('id')]);
+            $data['data']= $model->super_w('peminjaman','buku','users',$on,$on2, ['userID' => session()->get('id')]);
         }
         // $data['kategori']= $model->relasiKategori();
         echo view('viewbuku/peminjaman/peminjaman',$data);
@@ -45,7 +45,7 @@ class Peminjaman extends BaseController
         $model = new M_model();
         $on="buku.bukuID=peminjaman.bukuID_peminjaman";
         $data['data']= $model->tampil('buku');
-        $data['peminjam']= $model->getWhere('user',['role' => "peminjam"]);
+        $data['peminjam']= $model->getWhere('users',['role' => "peminjam"]);
         // print_r($data);
         echo view('viewbuku/peminjaman/input',$data);
     }

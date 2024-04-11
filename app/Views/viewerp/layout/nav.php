@@ -13,35 +13,32 @@
                     <li><a class="sidebar-sub-toggle"><i class="ti-user"></i> User <span
                         class="sidebar-collapse-icon ti-angle-down"></span></a>
                         <ul>
-                        <li><a href="<?= base_url('/petugas')?>">petugas</a></li>
-                        <li><a href="<?= base_url('/peminjam')?>">Peminjam</a></li>
+                        <li><a href="<?= base_url('/petugas')?>">Petugas</a></li>
+                        <li><a href="<?= base_url('/teachers') ?>">Teachers</a></li>
+                        <li><a href="<?= base_url('/students') ?>">Students</a></li>
+                        <li><a href="<?= base_url('/classes') ?>">Classes</a></li>
                      </ul>
                  </li>
                  <?php  }else{}?>
                  
                 
-                <li><a class="sidebar-sub-toggle"><i class="ti-server"></i> Buku <span
+                <li><a class="sidebar-sub-toggle"><i class="ti-server"></i>Apklikasi <span
                     class="sidebar-collapse-icon ti-angle-down"></span></a>
                     <ul>
                     <li><a href="<?= base_url('/buku')?>">Daftar Buku</a></li>
-                     <?php  if(session()->get('role')== "admin"){ ?>
-                    <li><a href="<?= base_url('/Kategori')?>">Kategori Buku</a></li>
+                     <?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
+                    <li><a href="<?= base_url('/Inventaris')?>">Inventaris</a></li>
                     <?php }?>
-                    <?php  if(session()->get('role')== "student"){ ?>
-                    <li><a href="<?= base_url('/koleksi')?>">Koleksi Buku</a></li>
+                    <?php  if(session()->get('role')== "student" ){ ?>
+                    <li><a href="<?= base_url('/BukuController/dashboard')?>">Koleksi Buku</a></li>
                     <?php }?>
-                    <li><a href="<?= base_url('/peminjaman')?>">Peminjaman Buku</a></li>
+                    <?php  if(session()->get('role') != "petugas"){ ?>
+                    <li><a href="<?= base_url('/user')?>">Ujian Online</a></li>
+                    <?php } ?>
                         
                     </ul>
                 </li>
                
-
-               <?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
-
-                <li class="label">Laporan</li>
-              <li><a href="/laporan"><i class="ti-book"></i> Laporan</a></li>
-
-              <?php  }else{}?>
 
               <br>
               <li class="label">Account</li>

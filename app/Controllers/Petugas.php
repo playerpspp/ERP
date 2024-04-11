@@ -24,7 +24,7 @@ class Petugas extends BaseController
         }
 
         $model = new M_model();
-        $data['data']= $model->getWhere('user',['role !=' => 'peminjam']);
+        $data['data']= $model->getWhere('users',['role !=' => 'peminjam']);
         echo view('viewbuku/petugas/petugas',$data);
     }
 
@@ -62,7 +62,7 @@ class Petugas extends BaseController
         );
 
         $model=new M_model();
-        $model->simpan('user', $user);
+        $model->simpan('users', $user);
         
         $log = array(
             'isi_log' => 'user menambahkan data petugas',
@@ -83,7 +83,7 @@ class Petugas extends BaseController
         }
 
         $model = new M_model();
-        $data['data']= $model->getRow('user',['id_user ' => $id]);
+        $data['data']= $model->getRow('users',['id_user ' => $id]);
         echo view('viewbuku/petugas/edit',$data);
     }
 
@@ -111,7 +111,7 @@ class Petugas extends BaseController
         
 
         $model=new M_model();
-        $model->edit('user', $user,$where);
+        $model->edit('users', $user,$where);
 
        
         
@@ -135,7 +135,7 @@ class Petugas extends BaseController
         $model=new M_model();
         $where2=array('id_user'=>$id);
 
-        $model->hapus('user',$where2);
+        $model->hapus('users',$where2);
 
         $log = array(
             'isi_log' => 'user menghapus data petugas',
@@ -161,7 +161,7 @@ class Petugas extends BaseController
         $data=array(
             'password'=>md5('halo#12345')
         );
-        $model->edit('user',$data,$where);
+        $model->edit('users',$data,$where);
 
         $log = array(
             'isi_log' => 'user melakukan reset password pada petugas',

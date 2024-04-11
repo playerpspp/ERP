@@ -2,7 +2,7 @@
     <div class="col-md-12">
 
       <div class="footer">
-       <p>2023 © ujian online.</p>
+       <p>2024 © ERP Sekolah.</p>
    </div>
 </div>
 </div>

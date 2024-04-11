@@ -1,6 +1,6 @@
-<?= view('viewbuku/layout/header')?>
+<?= view('viewerp/layout/header')?>
 
-<?= view('viewbuku/layout/nav')?>
+<?= view('viewerp/layout/nav')?>
 
 
 <div class="col-md-12 col-sm-12 col-xs-12">
@@ -54,4 +54,4 @@
 </div>
 </div>
 
-<?= view('viewbuku/layout/footer')?>
+<?= view('viewerp/layout/footer')?>

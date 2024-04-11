@@ -1,6 +1,6 @@
-<?= view('viewbuku/layout/header')?>
+<?= view('viewerp/layout/header')?>
 
-<?= view('viewbuku/layout/nav')?>
+<?= view('viewerp/layout/nav')?>
 
 <div class="row">
 
@@ -73,5 +73,5 @@
 </div>
 
 
-<?= view('viewbuku/layout/footer')?>
+<?= view('viewerp/layout/footer')?>
 

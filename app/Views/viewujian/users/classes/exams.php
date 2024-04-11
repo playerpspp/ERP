@@ -1,6 +1,6 @@
-<?= view('viewujian/head'); ?>
+<?= view('viewerp/head'); ?>
 
-<?= view('viewujian/nav'); ?>
+<?= view('viewerp/nav'); ?>
 <head>
     <title>Exams Table</title>
     <link href="/css/lib/jsgrid/jsgrid-theme.min.css" rel="stylesheet" />
@@ -22,7 +22,7 @@
                 <h4>Exams that have been made for class: <?= $class->class_name ?> </h4>
             </div>
             <div class="card-body">
-             <?php if(session()->get('teacher_id') == $class->teacher_id) { ?>
+             <?php if( session()->get('teacher_id') == $class->teacher_id) { ?>
                 <a style="margin-left: 5px;" href="<?= base_url('/exams/input') ?>"><button class="btn btn-box" title="Add new"><i class="ti-plus"></i></button></a>
 
             <?php } ?>
@@ -68,4 +68,4 @@
 </div>
 
 
-<?= view('viewujian/footer'); ?>
+<?= view('viewerp/footer'); ?>

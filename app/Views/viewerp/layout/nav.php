@@ -3,7 +3,7 @@
         <div class="nano-content">
             <ul>
                 <div class="logo"><a href="index.html">
-                    <!-- <img src="images/logo.png" alt="" /> --><span>Perpustakaan Sekolah</span></a></div>
+                    <!-- <img src="images/logo.png" alt="" /> --><span>ERP Sekolah</span></a></div>
                     <li class="label">Dashboard</li>
                     <li><a href="/home/dashboard"><i class="ti-dashboard"></i> Dashboard </a></li>
                     <br>
@@ -25,12 +25,11 @@
                 <li><a class="sidebar-sub-toggle"><i class="ti-server"></i>Apklikasi <span
                     class="sidebar-collapse-icon ti-angle-down"></span></a>
                     <ul>
-                    <li><a href="<?= base_url('/buku')?>">Daftar Buku</a></li>
                      <?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
                     <li><a href="<?= base_url('/Inventaris')?>">Inventaris</a></li>
                     <?php }?>
-                    <?php  if(session()->get('role')== "student" ){ ?>
-                    <li><a href="<?= base_url('/BukuController/dashboard')?>">Koleksi Buku</a></li>
+                    <?php  if(session()->get('role')!= "teacher" ){ ?>
+                    <li><a href="<?= base_url('/BukuController/dashboard')?>">Perpustakaan</a></li>
                     <?php }?>
                     <?php  if(session()->get('role') != "petugas"){ ?>
                     <li><a href="<?= base_url('/user')?>">Ujian Online</a></li>

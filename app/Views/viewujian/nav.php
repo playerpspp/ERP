@@ -8,18 +8,7 @@
                     <li><a href="<?= base_url('/user') ?>"><i class="ti-dashboard"></i> Dashboard </a></li>
                     <br>
                     <li class="label">Apps</li>
-                    <?php if(session()->get('role') == "admin") { ?>
-                        <li><a class="sidebar-sub-toggle"><i class="ti-user"></i> Users <span
-                            class="sidebar-collapse-icon ti-angle-down"></span></a>
-                            <ul>
-                                <li><a href="<?= base_url('/teachers') ?>">Teachers</a></li>
-                                <li><a href="<?= base_url('/students') ?>">Students</a></li>
-                                <li><a href="<?= base_url('/classes') ?>">Classes</a></li>
-                            </ul>
-                        </li>
-                    <?php }else{ ?>
-                        <li><a href="<?= base_url('/exams') ?>"><i class="ti-file"></i> Exams Result </a></li>
-                    <?php } ?>
+                    
                     <br>
                     <li><a href="<?= base_url('/exams') ?>"><i class="ti-file"></i> Exams </a></li>
                     <li class="label">Account</li>

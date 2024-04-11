@@ -4,7 +4,7 @@
     <div class="col-md-12">
 
         <div class="footer">
-        <p>2024 @ Perpustakaan Digital.</p>
+        <p>2024 @ ERP Sekolah.</p>
         </div>
     </div>
 </div>

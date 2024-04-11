@@ -1,6 +1,6 @@
-<?= view('viewujian/head'); ?>
+<?= view('viewerp/head'); ?>
 
-<?= view('viewujian/nav'); ?>
+<?= view('viewerp/nav'); ?>
 <head>
     <title>Class List: <?= $class->class_name ?></title>
 </head>
@@ -53,4 +53,4 @@
 </div>
 
 
-<?= view('viewujian/footer'); ?>
+<?= view('viewerp/footer'); ?>

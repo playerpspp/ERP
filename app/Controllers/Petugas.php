@@ -46,7 +46,7 @@ class Petugas extends BaseController
         }
         $model=new M_model();
        
-        $namaLengkap=$this->request->getPost('nama_karyawan');
+        $nama_karyawan=$this->request->getPost('nama_karyawan');
         $email=$this->request->getPost('email');
         $NIK=$this->request->getPost('NIK');
         $jk=$this->request->getPost('jk');
@@ -63,7 +63,7 @@ class Petugas extends BaseController
         $user_id = $model->simpanID('users', $user);
         $karyawan=array(
             'NIK'=>$NIK,
-            'nama'=> $namaLengkap,
+            'nama'=> $nama_karyawan,
             'user_id'=>$user_id,
             'JK'=>$jk,
         );
@@ -92,8 +92,8 @@ class Petugas extends BaseController
         }
 
         $model = new M_model();
-
-        $data['data']= $model->getRow('users',['id_user ' => $id]);
+        $on="users.id_user=karyawan.user_id";
+        $data['data']= $model->fusionRow('users','karyawan',$on,['users.id_user ' => $id]);
         echo view('viewbuku/petugas/edit',$data);
     }
 
@@ -104,7 +104,7 @@ class Petugas extends BaseController
             return redirect()->to(base_url('/home/dashboard'));
         }
         $id= $this->request->getPost('id');    
-        $namaLengkap=$this->request->getPost('nama_karyawan');
+        $nama_karyawan=$this->request->getPost('nama_karyawan');
         $email=$this->request->getPost('email');
         $NIK=$this->request->getPost('NIK');
         $jk=$this->request->getPost('jk');
@@ -117,14 +117,12 @@ class Petugas extends BaseController
        
         $user=array(
             'username'=>$username,
-            'password'=>md5('halo#12345'),
             'email'=>$email,
             'role'=>$role,
         );
 $karyawan=array(
             'NIK'=>$NIK,
-            'nama'=> $namaLengkap,
-            // 'user_id'=>$id,
+            'nama'=> $nama_karyawan,
             'JK'=>$jk,
         );
         

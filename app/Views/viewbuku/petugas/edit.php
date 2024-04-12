@@ -12,6 +12,12 @@
                 <form id="userForm" class="form-horizontal form-label-left" novalidate  action="<?= base_url('petugas/aksi_edit')?>" method="post">
                  <input type="hidden" name="id" value="<?= $data->id_user ?>">
 
+                 <div class="mb-3 col-md-6">
+                    <label class="form-label">Username<span style="color: red;">*</span></label>
+                    <input type="text" id="username" name="username" 
+                    class="form-control text-capitalize" placeholder="Username" value="<?= $data->username?>">
+                </div>
+
                  <div class="row">
                     <div class="mb-3 col-md-6">
                         <label class="form-label">Nama Karyawan<span style="color: red;">*</span></label>

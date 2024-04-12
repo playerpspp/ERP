@@ -11,9 +11,8 @@
                     
                     <br>
                     <li><a href="<?= base_url('/exams') ?>"><i class="ti-file"></i> Exams </a></li>
-                    <li class="label">Account</li>
-                    <li><a href="<?= base_url('/profile') ?>"><i class="ti-info-alt"></i> Profile</a></li>
-                    <li><a href="<?= base_url('/home/Logout') ?>"><i class="ti-close"></i> Logout</a></li>
+                    <li class="label">Kembali ke ERP</li>
+                    <li><a href="<?= base_url('/home') ?>"><i class="ti-arrow-left"></i> Kembali</a></li>
                 </ul>
             </div>
         </div>

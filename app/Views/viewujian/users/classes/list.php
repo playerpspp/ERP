@@ -1,6 +1,6 @@
-<?= view('viewerp/head'); ?>
+<?= view('viewerp/layout/header'); ?>
 
-<?= view('viewerp/nav'); ?>
+<?= view('viewerp/layout/nav'); ?>
 <head>
     <title>Class List: <?= $class->class_name ?></title>
 </head>
@@ -21,20 +21,20 @@
                 <div class="card-body">
 
                     <div class="table-responsive">
-                        <table class="table m-t-10">
+                    <table id="bootstrap-data-table" class="table table-striped table-bordered">
                             <thead>
                                 <tr>
-                                    <th width="10%">Student Name</th>
-                                    <th width="5%">NISN</th>
-                                    <td></td>
+                                    <th style="text-align: center;" width="1000px">Student Name</th>
+                                    <th style="text-align: center;" width="1000px">NISN</th>
+                                    <td style="text-align: center;" width="1000px">Action</td>
                                 </tr>
                             </thead>
                             <tbody>
                                 <?php foreach($students as $student) { ?>
                                     <tr>
-                                        <td><?= $student->student_name ?></td>
-                                        <td><?= $student->NISN ?></td>
-                                        <td>
+                                        <td style="text-align: center;" class="text-capitalize"><?= $student->student_name ?></td>
+                                        <td style="text-align: center;" class="text-capitalize"><?= $student->NISN ?></td>
+                                        <td style="text-align: center;" class="text-capitalize">
                                             <a href="<?= base_url('/classes/remove/'. $student->student_id .'/' . $class->class_id) ?>"><button class="btn btn-danger" title="detail"><i class="ti-trash"></i></button></a>
                                         </td>
                                    </tr>
@@ -53,4 +53,4 @@
 </div>
 
 
-<?= view('viewerp/footer'); ?>
+<?= view('viewerp/layout/footer'); ?>

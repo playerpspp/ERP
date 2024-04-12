@@ -14,14 +14,14 @@
 
                  <div class="row">
                     <div class="mb-3 col-md-6">
-                        <label class="form-label">Nama Pegawai<span style="color: red;">*</span></label>
-                        <input type="text" id="nama_pegawai" name="nama_pegawai" 
-                        class="form-control text-capitalize" placeholder="Nama Pegawai" >
+                        <label class="form-label">Nama karyawan<span style="color: red;">*</span></label>
+                        <input type="text" id="nama_karyawan" name="nama_karyawan" 
+                        class="form-control text-capitalize" placeholder="Nama karyawan" >
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label class="form-label">Alamat<span style="color: red;">*</span></label>
-                        <input type="text" id="alamat" name="alamat" 
-                        class="form-control text-capitalize" placeholder="Alamat" autocomplete="on" >
+                        <label class="form-label">NIK<span style="color: red;">*</span></label>
+                        <input type="number" id="NIK" name="NIK" 
+                        class="form-control text-capitalize" placeholder="NIK" autocomplete="on" >
                     </div>
                     <div class="mb-3 col-md-6">
                         <label class="form-label">email<span style="color: red;">*</span></label>
@@ -35,13 +35,22 @@
                     class="form-control text-capitalize" placeholder="Username" >
                 </div>
 
-           
                 <div class="mb-3 col-md-6">
                     <label class="form-label">Level<span style="color: red;">*</span></label>
                     <div class="col-12">
-                        <select id="level" class="form-control col-12" name="level" required="required">
-                            <option value="admin" selected>Admin</option>
-                            <option value="petugas">Petugas</option>
+                        <select id="role" class="form-control col-12" name="role" required="required">
+                            <option value="admin" >Admin</option>
+                            <option value="petugas" selected>Petugas</option>
+                      </select>
+                  </div>
+              </div>
+
+              <div class="mb-3 col-md-6">
+                    <label class="form-label">Jenis Kelamin<span style="color: red;">*</span></label>
+                    <div class="col-12">
+                        <select id="jk" class="form-control col-12" name="jk" required="required">
+                            <option value="Laki-laki" selected>Laki-laki</option>
+                            <option value="Perempuan">Perempuan</option>
                       </select>
                   </div>
               </div>

@@ -32,11 +32,17 @@ class Profile extends BaseController
             $on = 'users.id_user=students.user_id';
             $where =array('id_user'=> session()->get('id_user'));
             $user['user'] = $model->fusionRow('users','students',$on,$where);
-        }elseif($role != 'student') {
+        }elseif($role == 'teacher') {
             $on = 'users.id_user=teachers.user_id';
             $where =array('id_user'=> session()->get('id_user'));
             $user['user'] = $model->fusionRow('users','teachers',$on,$where);
+        }elseif($role == 'petugas' || $role == "admin"){
+            $on = 'users.id_user=karyawan.user_id';
+            $where =array('id_user'=> session()->get('id_user'));
+            $user['user'] = $model->fusionRow('users','karyawan',$on,$where);
         }
+
+        
 
         echo view('viewujian/users/profile',$user);
 

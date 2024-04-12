@@ -31,6 +31,8 @@
     <link href="css/lib/bootstrap.min.css" rel="stylesheet">
     <link href="css/lib/helper.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
+        <link href="css/lib/data-table/buttons.bootstrap.min.css" rel="stylesheet" />
+
 
     
 </head>

@@ -14,14 +14,14 @@
 
                  <div class="row">
                     <div class="mb-3 col-md-6">
-                        <label class="form-label">Nama Pegawai<span style="color: red;">*</span></label>
-                        <input type="text" id="nama_pegawai" name="nama_pegawai" 
-                        class="form-control text-capitalize" placeholder="Nama Pegawai" value="<?= $data->namaLengkap?>">
+                        <label class="form-label">Nama Karyawan<span style="color: red;">*</span></label>
+                        <input type="text" id="nama_Karyawan" name="nama_Karyawan" 
+                        class="form-control text-capitalize" placeholder="Nama Karyawan" value="<?= $data->nama?>">
                     </div>
                     <div class="mb-3 col-md-6">
-                        <label class="form-label">Alamat<span style="color: red;">*</span></label>
-                        <input type="text" id="alamat" name="alamat" 
-                        class="form-control text-capitalize" placeholder="Alamat" autocomplete="on"  value="<?= $data->alamat?>">
+                        <label class="form-label">NIK<span style="color: red;">*</span></label>
+                        <input type="number" id="NIK" name="NIK" 
+                        class="form-control text-capitalize" placeholder="NIK" autocomplete="on"  value="<?= $data->NIK?>">
                     </div>
                     <div class="mb-3 col-md-6">
                         <label class="form-label">email<span style="color: red;">*</span></label>
@@ -33,12 +33,23 @@
                     <div class="mb-3 col-md-6">
                     <label class="form-label">Level<span style="color: red;">*</span></label>
                     <div class="col-12">
-                        <select id="level" class="form-control col-12" name="level" required="required">
-                            <option value="admin" selected>Admin</option>
-                            <option value="petugas">Petugas</option>
+                        <select id="role" class="form-control col-12" name="role" required="required">
+                            <option value="admin"  <?php echo ($data->role == 'admin') ? 'selected' : ''; ?>>Admin</option>
+                            <option value="petugas"<?php echo ($data->role == 'petugas') ? 'selected' : ''; ?>>Petugas</option>
                       </select>
                   </div>
               </div>
+
+              <div class="mb-3 col-md-6">
+                    <label class="form-label">Jenis Kelamin<span style="color: red;">*</span></label>
+                    <div class="col-12">
+                        <select id="jk" class="form-control col-12" name="jk" required="required">
+                            <option value="Laki-laki" <?php echo ($data->jk == 'Laki-laki') ? 'selected' : ''; ?>>Laki-laki</option>
+                            <option value="Perempuan" <?php echo ($data->jk == 'Perempuan') ? 'selected' : ''; ?>>Perempuan</option>
+                        </select>
+                    </div>
+                </div>
+
           </div>
          
           <button type="submit" id="updateButton" class="btn btn-success">Edit Data</button>

@@ -32,7 +32,6 @@ class User extends BaseController
 
     if (session()->get('role') == 'admin') 
         {
-            $id = session()->get('teacher_id');
             // print_r($where);
             $where =array('exams.end_time >' => date('Y-m-d H:i:s'));        
             // print_r($where);

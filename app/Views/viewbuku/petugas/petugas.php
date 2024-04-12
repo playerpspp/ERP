@@ -19,7 +19,7 @@
 							<th style="text-align: center;" width="1000px">No.</th>
 							<th style="text-align: center;" width="1000px">Nama Lengkap</th>
 							<th style="text-align: center;" width="1000px">Email</th>
-							<th style="text-align: center;" width="1000px">Alamat</th>
+							<th style="text-align: center;" width="1000px">NIK</th>
 							<th style="text-align: center;" width="1000px">Username</th>
 							<th style="text-align: center;" width="1000px">Level</th>
 							<th style="text-align: center;" width="1300px">Action</th>
@@ -31,11 +31,11 @@
                     foreach ($data as $dataa){?>
 						<tr>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $no++ ?></td>
-							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->namaLengkap ?></td>
+							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->nama ?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->email ?></td>
-							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->alamat ?></td>
+							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->NIK ?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->username ?></td>
-							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->level ?></td>
+							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->role ?></td>
 							<td>
 							<div class="text-center mb-1">
                                <a href="<?= base_url('/petugas/reset_password/'.$dataa->id_user)?>"> <button type="button" class="btn btn-info" >

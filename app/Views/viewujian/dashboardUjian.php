@@ -2,7 +2,7 @@
 
 <?= view('viewujian/nav'); ?>
 <head>
-    <title>Dashboard</title>
+    <title>Ujian Online</title>
 </head>
 
 <!-- /# row -->

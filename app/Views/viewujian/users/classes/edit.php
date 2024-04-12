@@ -1,6 +1,6 @@
-<?= view('viewerp/head'); ?>
+<?= view('viewerp/layout/header'); ?>
 
-<?= view('viewerp/nav'); ?>
+<?= view('viewerp/layout/nav'); ?>
 
 <head>
     <title>Edit Class <?= $class->class_name  ?> </title>
@@ -11,6 +11,9 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-10">
+                <a onclick="history.back()"><button class="btn btn-primary">
+                Back
+            </button></a>
                     <div class="card">
                         <div class="card-title">
                             <h4>Edit Class Form</h4>
@@ -42,4 +45,4 @@
             </div>
         </div>
     </div>
-    <?= view('viewerp/footer'); ?>
+    <?= view('viewerp/layout/footer'); ?>

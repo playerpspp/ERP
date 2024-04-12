@@ -37,8 +37,8 @@
               <?php  } ?>
 
               <br>
-              <li class="label">Exit</li>
-              <li><a href="<?= base_url('/Inventaris/Exit')?>"><i class="ti-close"></i> Exit</a></li>
+              <li class="label">Kembali ke ERP</li>
+              <li><a href="<?= base_url('/Home')?>"><i class="ti-arrow-left"></i> Kembali</a></li>
           </ul>
       </div>
   </div>

@@ -1,6 +1,6 @@
-<?= view('viewerp/head'); ?>
+<?= view('viewerp/layout/header'); ?>
 
-<?= view('viewerp/nav'); ?>
+<?= view('viewerp/layout/nav'); ?>
 
 <head>
     <title>New Student</title>
@@ -22,6 +22,7 @@
                         <div class="card-body">
                             <div class="basic-form">
                                 <form action="<?= base_url('/students/actinput') ?>" method="POST">
+                                <label>Username murid akan dibuat dari NISN mereka </label>
 
                                     <div class="form-group">
                                         <label>Name</label>
@@ -31,16 +32,6 @@
                                     <div class="form-group">
                                         <label>NISN</label>
                                         <input required type="text" id="nisn" value="" name="nisn" class="form-control" placeholder="NISN">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Username</label>
-                                        <input required type="text" id="username" value="" name="username" class="form-control" placeholder="Username">
-                                    </div>
-
-                                    <div class="form-group">
-                                        <label>Password</label>
-                                        <input required type="password" id="password" value="" name="password" class="form-control" placeholder="Password">
                                     </div>
 
                                     <div class="form-group">
@@ -58,4 +49,4 @@
             </div>
         </div>
     </div>
-    <?= view('viewerp/footer'); ?>
+    <?= view('viewerp/layout/footer'); ?>

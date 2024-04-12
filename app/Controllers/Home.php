@@ -12,9 +12,9 @@ class Home extends BaseController
     {
 if (empty(session()->get('id_user'))) {
             
-        echo view('head');
-        echo view('login');
-        echo view('footer');
+        echo view('viewujian/head');
+        echo view('viewujian/login');
+        echo view('viewujian/footer');
         }else{
             return redirect()->to(base_url('/home/dashboard'));
         }
@@ -24,10 +24,8 @@ if (empty(session()->get('id_user'))) {
     {
 if (session()->get('id_user') > 0) {
             
-        echo view('head');
-        echo view('nav');
-        echo view('dashboard');
-        echo view('footer');
+       
+        echo view('viewerp/pages/dashboard');
         }else{
             return redirect()->to(base_url('/home'));
         }
@@ -47,8 +45,10 @@ if (session()->get('id_user') > 0) {
        if ($cek>0) {
         $on = 'users.id_user=teachers.user_id';
         $on2 = 'users.id_user=students.user_id';
+        $on3 = 'users.id_user=karyawan.user_id';
         $teacher=$model->fusionArray('users','teachers',$on,$data);
         $student=$model->fusionArray('users','students',$on2,$data);
+        $petugas=$model->fusionArray('users','karyawan',$on3,$data);
     }
     // print_r($student);
     if (isset($teacher)){
@@ -64,6 +64,13 @@ if (session()->get('id_user') > 0) {
         session()->set('name', $student['student_name']);
         session()->set('role', $cek['role']);
         // session()->set('class_id', $student['class_id']);
+        return redirect()->to('/home/dashboard');
+
+    }elseif (isset($petugas)){
+        session()->set('id_user', $cek['id_user']);
+        session()->set('Karyawan_id', $petugas['id_kw']);
+        session()->set('name', $petugas['nama']);
+        session()->set('role', $cek['role']);
         return redirect()->to('/home/dashboard');
         }else{
             return redirect()->to(base_url('/home'));

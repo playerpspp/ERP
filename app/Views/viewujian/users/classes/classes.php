@@ -1,6 +1,6 @@
-<?= view('viewerp/head'); ?>
+<?= view('viewerp/layout/header'); ?>
 
-<?= view('viewerp/nav'); ?>
+<?= view('viewerp/layout/nav'); ?>
 
 <head>
 	<title>Classes Table</title>
@@ -23,15 +23,15 @@
 
 				<div class="card-body">
 					<div class="table-responsive">
-						<table class="table">
+						<table id="bootstrap-data-table" class="table table-striped table-bordered">
 							<thead>
 								<tr>
-									<th width="1%">#</th>
-									<th width="10%">Class Name</th>
-									<th width="10%">Teacher Name</th>
-									<th width="10%">Total Student</th>
-									<th width="5%">Lists</th>
-									<th width="5%">Action</th>
+									<th style="text-align: center;" width="1000px">#</th>
+									<th style="text-align: center;" width="1000px">Class Name</th>
+									<th style="text-align: center;" width="1000px">Teacher Name</th>
+									<th style="text-align: center;" width="1000px">Total Student</th>
+									<th style="text-align: center;" width="1000px">Lists</th>
+									<th style="text-align: center;" width="1000px">Action</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -40,21 +40,21 @@
 								foreach ($classes as $class) { ?>
 									<tr>
 										<th scope="row"><?= $no++ ?></th>
-										<td><?= $class->class_name ?></td>
-										<td><?= $class->teacher_name ?></td>
+										<td style="text-align: center;" class="text-capitalize"><?= $class->class_name ?></td>
+										<td style="text-align: center;" class="text-capitalize"><?= $class->teacher_name ?></td>
 										<?php if (isset($count[$class->class_id])) { ?>
-											<td><?= $count[$class->class_id]->total_students ?></td>
+											<td style="text-align: center;" class="text-capitalize"><?= $count[$class->class_id]->total_students ?></td>
 										<?php } else { ?>
-											<td>0</td>
+											<td style="text-align: center;" class="text-capitalize">0</td>
 										<?php } ?>
-										<td>
+										<td style="text-align: center;" class="text-capitalize">
 											<a href="<?= base_url('/classes/list/'. $class->class_id) ?>"><button class="btn btn-box" title=" Student list"><i class="ti-list"></i></button></a>
 											<a href="<?= base_url('/classes/exams/'. $class->class_id) ?>"><button class="btn btn-box" title="exams list"><i class="ti-clipboard"></i></button></a>
 										</td>
-										<td>
-											<a href="<?= base_url('/classes/edit/'. $class->class_id) ?>"><button class="btn btn-box" title="Edit"><i class="ti-pencil-alt"></i></button></a>
+										<td style="text-align: center;" class="text-capitalize">
+											<a href="<?= base_url('/classes/edit/'. $class->class_id) ?>"><button class="btn btn-box " title="Edit"><i class="ti-pencil-alt"></i></button></a>
 
-											<a href="<?= base_url('/classes/delete/'. $class->class_id) ?>"><button class="btn btn-box" title="Delete"><i class="mdi mdi-server-remove"></i></button></a>
+											<a href="<?= base_url('/classes/delete/'. $class->class_id) ?>"><button class="btn btn-box " title="Delete"><i class=" ti-trash"></i></button></a>
 										</td>
 									</tr>
 								<?php } ?>
@@ -72,4 +72,4 @@
 
 
 
-<?= view('viewerp/footer'); ?>
+<?= view('viewerp/layout/footer'); ?>

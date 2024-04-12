@@ -1,6 +1,6 @@
-<?= view('viewerp/head'); ?>
+<?= view('viewerp/layout/header'); ?>
 
-<?= view('viewerp/nav'); ?>
+<?= view('viewerp/layout/nav'); ?>
 
 <head>
 	<title>Students Table</title>
@@ -23,15 +23,15 @@
 
 				<div class="card-body">
 					<div class="table-responsive">
-						<table class="table">
+						<table id="bootstrap-data-table" class="table table-striped table-bordered">
 							<thead>
 								<tr>
-									<th>#</th>
-									<th>Name</th>
-									<th>NISN</th>
-									<th>Email</th>
-									<th>Username</th>
-									<th>Action</th>
+									<th style="text-align: center;" width="1000px">#</th>
+									<th style="text-align: center;" width="1000px">Name</th>
+									<th style="text-align: center;" width="1000px">NISN</th>
+									<th style="text-align: center;" width="1000px">Email</th>
+									<th style="text-align: center;" width="1000px">Username</th>
+									<th style="text-align: center;" width="1000px">Action</th>
 								</tr>
 							</thead>
 							<tbody>
@@ -40,15 +40,15 @@
 								
 								foreach ($students as $student) { ?>
 									<tr>
-										<th scope="row"><?= $no++ ?></th>
-										<td><?= $student->student_name ?></td>
-										<td><?= $student->NISN ?></td>
-										<td><?= $student->email ?></td>
-										<td><?= $student->username ?></td>
-										<td>
-											<a href="<?= base_url('/students/edit/'. $student->id_user) ?>"><button class="btn btn-box" title="Edit"><i class="ti-pencil-alt"></i></button></a>
+										<th style="text-align: center;" class="text-capitalize"><?= $no++ ?></th>
+										<td style="text-align: center;" class="text-capitalize"><?= $student->student_name ?></td>
+										<td style="text-align: center;" class="text-capitalize"><?= $student->NISN ?></td>
+										<td style="text-align: center;" class="text-capitalize"><?= $student->email ?></td>
+										<td style="text-align: center;" class="text-capitalize"><?= $student->username ?></td>
+										<td style="text-align: center;" class="text-capitalize">
+											<a href="<?= base_url('/students/edit/'. $student->id_user) ?>"><button class="btn btn-box btn-warning" title="Edit"><i class="ti-pencil-alt"></i></button></a>
 
-											<a href="<?= base_url('/students/delete/'. $student->id_user) ?>"><button class="btn btn-box" title="Delete"><i class="ti-trash"></i></button></a>
+											<a href="<?= base_url('/students/delete/'. $student->id_user) ?>"><button class="btn btn-box btn-danger" title="Delete"><i class="ti-trash"></i></button></a>
 										</td>
 									</tr>
 								<?php } ?>
@@ -66,4 +66,4 @@
 
 
 
-	<?= view('viewerp/footer'); ?>
+	<?= view('viewerp/layout/footer'); ?>

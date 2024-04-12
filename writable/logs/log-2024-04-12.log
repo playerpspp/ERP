@@ -1,0 +1,106 @@
+CRITICAL - 2024-04-12 18:14:27 --> Invalid file: head.php
+#0 C:\BARANG ERP\ERP\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('head.php')
+#1 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('head', Array, true)
+#2 C:\BARANG ERP\ERP\app\Controllers\Home.php(15): view('head')
+#3 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Home->index()
+#4 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#8 {main}
+ERROR - 2024-04-12 18:15:49 --> Unknown column 'students.user_id' in 'on clause'
+CRITICAL - 2024-04-12 18:15:49 --> Call to a member function getRowArray() on bool
+#0 C:\BARANG ERP\ERP\app\Controllers\Home.php(53): App\Models\M_model->fusionArray('users', 'karyawan', 'users.id_user=s...', Array)
+#1 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Home->actLogin()
+#2 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#3 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#6 {main}
+CRITICAL - 2024-04-12 18:16:30 --> Invalid file: viewerp/head.php
+#0 C:\BARANG ERP\ERP\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewerp/head.ph...')
+#1 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewerp/head', Array, true)
+#2 C:\BARANG ERP\ERP\app\Controllers\Home.php(27): view('viewerp/head')
+#3 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Home->dashboard()
+#4 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#8 {main}
+CRITICAL - 2024-04-12 18:16:57 --> Invalid file: viewerp/layout/head.php
+#0 C:\BARANG ERP\ERP\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewerp/layout/...')
+#1 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewerp/layout/...', Array, true)
+#2 C:\BARANG ERP\ERP\app\Controllers\Home.php(27): view('viewerp/layout/...')
+#3 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Home->dashboard()
+#4 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#8 {main}
+CRITICAL - 2024-04-12 18:17:28 --> Invalid file: viewerp/dashboard.php
+#0 C:\BARANG ERP\ERP\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewerp/dashboa...')
+#1 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewerp/dashboa...', Array, true)
+#2 C:\BARANG ERP\ERP\app\Controllers\Home.php(29): view('viewerp/dashboa...')
+#3 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Home->dashboard()
+#4 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#8 {main}
+CRITICAL - 2024-04-12 18:45:52 --> Invalid file: viewerp/head.php
+#0 C:\BARANG ERP\ERP\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewerp/head.ph...')
+#1 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewerp/head', Array, true)
+#2 C:\BARANG ERP\ERP\app\Views\viewujian\users\teachers\teachers.php(1): view('viewerp/head')
+#3 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#4 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewujian/users...', Array, true)
+#6 C:\BARANG ERP\ERP\app\Controllers\Teachers.php(35): view('viewujian/users...', Array)
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Teachers->index()
+#8 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teachers))
+#9 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#12 {main}
+CRITICAL - 2024-04-12 18:45:54 --> Invalid file: viewerp/head.php
+#0 C:\BARANG ERP\ERP\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewerp/head.ph...')
+#1 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewerp/head', Array, true)
+#2 C:\BARANG ERP\ERP\app\Views\viewujian\users\students\students.php(1): view('viewerp/head')
+#3 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#4 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewujian/users...', Array, true)
+#6 C:\BARANG ERP\ERP\app\Controllers\Students.php(36): view('viewujian/users...', Array)
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Students->index()
+#8 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Students))
+#9 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#12 {main}
+CRITICAL - 2024-04-12 18:45:55 --> Invalid file: viewerp/head.php
+#0 C:\BARANG ERP\ERP\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewerp/head.ph...')
+#1 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewerp/head', Array, true)
+#2 C:\BARANG ERP\ERP\app\Views\viewujian\users\classes\classes.php(1): view('viewerp/head')
+#3 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#4 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewujian/users...', Array, true)
+#6 C:\BARANG ERP\ERP\app\Controllers\Classes.php(35): view('viewujian/users...', Array)
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Classes->index()
+#8 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Classes))
+#9 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#12 {main}
+ERROR - 2024-04-12 19:13:48 --> Duplicate entry 'tes@gmail.com' for key 'users_email_unique'
+CRITICAL - 2024-04-12 20:37:30 --> Invalid file: viewerp/layout/ head.php
+#0 C:\BARANG ERP\ERP\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('viewerp/layout/...')
+#1 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewerp/layout/...', Array, true)
+#2 C:\BARANG ERP\ERP\app\Views\viewujian\users\teachers\teachers.php(1): view('viewerp/layout/...')
+#3 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#4 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#5 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewujian/users...', Array, true)
+#6 C:\BARANG ERP\ERP\app\Controllers\Teachers.php(35): view('viewujian/users...', Array)
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Teachers->index()
+#8 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Teachers))
+#9 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#11 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#12 {main}

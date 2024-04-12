@@ -54,14 +54,13 @@ class Students extends BaseController
             return redirect()->to(base_url('/home'));
         }
 
-        $username= $this->request->getPost('username');
         $name= $this->request->getPost('name');
         $nisn= $this->request->getPost('nisn');
-        $password= $this->request->getPost('password');
+        $password= "112233";
         $email= $this->request->getPost('email');
 
         $user=array(
-            'username'=>$username,
+            'username'=>$nisn,
             'password'=>md5($password),
             'email'=>$email,
             'role'=>'student',
@@ -111,7 +110,6 @@ class Students extends BaseController
         $name= $this->request->getPost('name');
         $nisn= $this->request->getPost('nisn');
         $email= $this->request->getPost('email');
-        $class= $this->request->getPost('class');
         $id= $this->request->getPost('id');
         $where=array('id_user'=>$id);
         $where2=array('user_id'=>$id);
@@ -127,7 +125,7 @@ class Students extends BaseController
         $student=array(
             'student_name'=>$name,
             'NISN'=>$nisn,
-            'class_id'=>$class
+            // 'class_id'=>$class
         );
         $model->edit('students', $student, $where2);
         return redirect()->to(base_url('/students'));

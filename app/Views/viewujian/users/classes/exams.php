@@ -1,6 +1,6 @@
-<?= view('viewerp/head'); ?>
+<?= view('viewerp/layout/header'); ?>
 
-<?= view('viewerp/nav'); ?>
+<?= view('viewerp/layout/nav'); ?>
 <head>
     <title>Exams Table</title>
     <link href="/css/lib/jsgrid/jsgrid-theme.min.css" rel="stylesheet" />
@@ -27,26 +27,26 @@
 
             <?php } ?>
             <div class="table-responsive">
-                <table class="table student-data-table m-t-20">
+            <table id="bootstrap-data-table" class="table table-striped table-bordered">
                     <thead>
                         <tr>
-                            <th width="5%">Exam Name</th>
-                            <th width="3%">Class</th>
-                            <th width="5%">teacher</th>
-                            <th width="5%">Start at</th>
-                            <th width="5%">End at</th>
-                            <th width="5%">Action</th>
+                            <th style="text-align: center;" width="1000px">Exam Name</th>
+                            <th style="text-align: center;" width="1000px">Class</th>
+                            <th style="text-align: center;" width="1000px">teacher</th>
+                            <th style="text-align: center;" width="1000px">Start at</th>
+                            <th style="text-align: center;" width="1000px">End at</th>
+                            <th style="text-align: center;" width="1000px">Action</th>
                         </tr>
                     </thead>
                     <tbody>
                         <?php foreach($exams as $exam) { ?>
                             <tr>
-                                <td><?= $exam->exam_name ?></td>
-                                <td><?= $exam->class_name ?></td>
-                                <td><?= $exam->teacher_name ?></td>
-                                <td><?= $exam->start_time ?></td>
-                                <td><?= $exam->end_time ?></td>
-                                <td>
+                                <td style="text-align: center;" class="text-capitalize"><?= $exam->exam_name ?></td>
+                                <td style="text-align: center;" class="text-capitalize"><?= $exam->class_name ?></td>
+                                <td style="text-align: center;" class="text-capitalize"><?= $exam->teacher_name ?></td>
+                                <td style="text-align: center;" class="text-capitalize"><?= $exam->start_time ?></td>
+                                <td style="text-align: center;" class="text-capitalize"><?= $exam->end_time ?></td>
+                                <td style="text-align: center;" class="text-capitalize">
 
                                     <a href="<?= base_url('/exams/detail/'. $exam->exam_id) ?>"><button class="btn btn-box" title="detail"><i class="ti-clipboard"></i></button></a>
                                     <a href="<?= base_url('/exams/list/'. $exam->exam_id) ?>"><button class="btn btn-box" title="Students List"><i class="ti-list"></i></button></a>
@@ -68,4 +68,4 @@
 </div>
 
 
-<?= view('viewerp/footer'); ?>
+<?= view('viewerp/layout/footer'); ?>

@@ -1,6 +1,6 @@
-<?= view('viewerp/head'); ?>
+<?= view('viewerp/layout/header'); ?>
 
-<?= view('viewerp/nav'); ?>
+<?= view('viewerp/layout/nav'); ?>
 
 <head>
     <title>New Class</title>
@@ -51,4 +51,4 @@
             </div>
         </div>
     </div>
-    <?= view('viewerp/footer'); ?>
+    <?= view('viewerp/layout/footer'); ?>

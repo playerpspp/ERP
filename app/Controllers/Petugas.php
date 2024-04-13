@@ -72,7 +72,7 @@ class Petugas extends BaseController
 
         
        
-        
+        $model=new M_model();
         $log = array(
             'isi_log' => 'user menambahkan data petugas',
             'log_idUser' => $maker_karyawan,

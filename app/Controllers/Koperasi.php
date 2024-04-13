@@ -236,6 +236,16 @@ public function aksi_tambah_b()
         'id_user'=>$id,
     );
     $model->simpan('barang',$data);
+
+    $model=new M_model();
+        $log = array(
+            'isi_log' => 'user menambahkan data barang',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
     return redirect()->to('/Koperasi/t_barang');
 }
 
@@ -256,6 +266,15 @@ public function aksi_tambah_bm()
         'id_user'=>$id,
     );
     $model->simpan('barang_masuk',$data);
+    $model=new M_model();
+        $log = array(
+            'isi_log' => 'user menambahkan data barang masuk',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
     return redirect()->to('/Koperasi/t_masuk');
 }
 
@@ -276,6 +295,15 @@ public function aksi_tambah_trans()
         'id_user'=>$id,
     );
     $model->simpan('transaksi',$data);
+    $model=new M_model();
+        $log = array(
+            'isi_log' => 'user menambahkan data barang keluar',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
     return redirect()->to('/Koperasi/t_jual');
 }
 
@@ -321,6 +349,16 @@ public function aksi_edit_b()
     );
     $where=array('id_brg'=>$id);
     $model->edit('barang',$data,$where);
+
+    $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mengedit data barang',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
     return redirect()->to('/Koperasi/t_barang');
 }
 
@@ -335,6 +373,16 @@ public function hapus_b($id)
         $model=new M_model();
         $where=array('id_brg'=>$id);
         $model->hapus('barang',$where);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user menghapus data barang',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         return redirect()->to('/Koperasi/t_barang');
 
     
@@ -349,6 +397,16 @@ public function hapus_bm($id)
         $model=new M_model();
         $where=array('id_msk'=>$id);
         $model->hapus('barang_masuk',$where);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user menghapus data barang masuk',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         return redirect()->to('/Koperasi/t_masuk');
 
     
@@ -363,6 +421,16 @@ public function hapus_bj($id)
         $model=new M_model();
         $where=array('id_trans'=>$id);
         $model->hapus('transaksi',$where);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user menghapus data barang keluar',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         return redirect()->to('/Koperasi/t_jual');
 
     
@@ -403,6 +471,15 @@ public function cari_b()
 
         $data['foto'] = base64_encode($img);
 
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user membuat laporan data barang',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         echo view('viewpos/c_b',$data);
 
     
@@ -423,6 +500,15 @@ public function cari_bm()
 
         $data['foto'] = base64_encode($img);
 
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user membuat laporan data barang masuk',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         echo view('viewpos/c_bm', $data);
 
     
@@ -442,6 +528,15 @@ public function cari_p()
             'C:\BARANG ERP\ERP\public\assets\images\KOP_PH.jpg');
 
         $data['foto'] = base64_encode($img);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user membuat laporan data barang keluar',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
 
         echo view('viewpos/c_p', $data);
 
@@ -494,6 +589,15 @@ public function excel_b()
     header('Content-Disposition:attachment;filename='.$fileName.'.xls');
     header('Cache-Control: max-age=0');
 
+    $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mebuat laporan excel data barang',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
     $writer->save('php://output');
 
 
@@ -541,6 +645,15 @@ public function excel_bm()
         header('Content-Disposition:attachment;filename='.$fileName.'.xls');
         header('Cache-Control: max-age=0');
 
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mebuat laporan excel data barang masuk',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         $writer->save('php://output');
 
     
@@ -586,6 +699,15 @@ public function excel_p()
         header('Content-Disposition:attachment;filename='.$fileName.'.xls');
         header('Cache-Control: max-age=0');
 
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mebuat laporan excel data barang keluar',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         $writer->save('php://output');
 
     
@@ -615,6 +737,16 @@ public function pdf_b()
         $dompdf->loadHtml(view('viewpos/c_b',$data));
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->render();
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mebuat laporan PDF data barang',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         $dompdf->stream('Daftar Buku.pdf',array('Attachment'=>0));
         
     
@@ -641,6 +773,16 @@ public function pdf_bm()
         $dompdf->loadHtml(view('viewpos/c_bm',$data));
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->render();
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mebuat laporan PDF data barang masuk',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         $dompdf->stream('Daftar Pinjaman.pdf',array('Attachment'=>0));
 
     
@@ -668,6 +810,16 @@ public function pdf_p()
         $dompdf->loadHtml(view('viewpos/c_p',$data));
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->render();
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mebuat laporan PDF data barang keluar',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+        
         $dompdf->stream('Daftar Transaksi.pdf',array('Attachment'=>0));
 
     

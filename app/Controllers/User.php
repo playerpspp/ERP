@@ -68,24 +68,5 @@ class User extends BaseController
     echo view('viewujian/dashboardUjian',$data);
 }
 
-public function user()
-{
-    $model = new M_model();
-    $user = $model->tampil('users');
-    echo json_encode($user);
 
-}
-
-public function teachers()
-{
-    $model = new M_model();
-    $on = 'users.id_user=teachers.user_id';
-    $user['teachers'] = $model->fusion('users','teachers',$on);
-
-        // echo view('viewujian/head');
-        // echo view('viewujian/nav');
-    echo view('viewujian/users/teachers/teachers',$user);
-        // echo view('viewujian/footer');
-
-}
 }

@@ -88,6 +88,16 @@ class Profile extends BaseController
             );
             $model->edit('students', $student, $where2);
         }
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user telah mengubah profile',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         return redirect()->to(base_url('/home/Logout'));
     }
 
@@ -120,6 +130,15 @@ class Profile extends BaseController
             return redirect()->back()->withInput();
 
         }
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user telah mengubah password',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
 
 
         return redirect()->to(base_url('/home/Logout'));

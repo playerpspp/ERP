@@ -46,6 +46,16 @@ class Laporan extends BaseController
         $awal= $this->request->getPost('awal');
         $akhir= $this->request->getPost('akhir');
         $data['data']=$model->filterbuku($awal,$akhir);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mebuat laporan data buku',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         echo view('viewbuku/laporan/kertas_laporan',$data);
 
         
@@ -66,6 +76,15 @@ class Laporan extends BaseController
         $dompdf->loadHtml(view('laporan/kertas_laporan',$data));
         $dompdf->setPaper('A4','landscape');
         $dompdf->render();
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mebuat laporan PDF data buku',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         $dompdf->stream('my.pdf', array('Attachment'=>false));
         exit();    
 

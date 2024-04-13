@@ -257,6 +257,14 @@ class Exams extends BaseController
 
 //         // $questionIds[] = $questionid;
         }
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user membuat soal ujian',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
 
         // $model->simpan('teachers', $teacher);
         return redirect()->to(base_url('/exams'));
@@ -369,6 +377,16 @@ class Exams extends BaseController
 
         $exam['answers'] = $model->getwhereInKey3('answers',$where2_array,'question_id');
         // echo json_encode($exam['answers'], JSON_PRETTY_PRINT);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mulai mengerjakan ujian',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         echo view('viewujian/exams/work',$exam);
     }
 
@@ -439,6 +457,15 @@ class Exams extends BaseController
         }
 
         $model->edit('exam_students',$grade,$where);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user telah selesai mengerjakan ujian',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
 
         return redirect()->to(base_url('/exams'));
     }
@@ -594,6 +621,15 @@ class Exams extends BaseController
             header('Content-type:vnd.openxmlformats-officedocument.spreadsheetml.sheet');
             header('Content-Disposition:attachment;filename='.$fileName.'.xlsx');
             header('Cache-Control: max-age=0');
+
+            $model=new M_model();
+        $log = array(
+            'isi_log' => 'user membuat excel dari hasil ujian',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
 
             $writer->save('php://output');
 

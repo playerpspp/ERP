@@ -77,6 +77,15 @@ class Teachers extends BaseController
             'user_id'=>$iduser
         );
         $model->simpan('teachers', $teacher);
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user menambahkan data guru',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         return redirect()->to(base_url('/teachers'));
     }
 
@@ -124,6 +133,16 @@ class Teachers extends BaseController
             'teacher_name'=>$name,
         );
         $model->edit('teachers', $teacher, $where2);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mengedit data guru',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         return redirect()->to(base_url('/teachers'));
     }
 
@@ -137,6 +156,15 @@ class Teachers extends BaseController
         $where2=array('user_id'=>$id);
         $model->hapus('teachers',$where2);
         $model->hapus('users',$where);
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user menghapus data guru',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         return redirect()->to(base_url('/teachers'));
     }
 

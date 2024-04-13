@@ -79,6 +79,16 @@ class Students extends BaseController
             'user_id'=>$iduser,
         );
         $model->simpan('students', $student);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user menambahkan data murid',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         return redirect()->to(base_url('/students'));
     }
 
@@ -128,6 +138,16 @@ class Students extends BaseController
             // 'class_id'=>$class
         );
         $model->edit('students', $student, $where2);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user mengedit data murid',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         return redirect()->to(base_url('/students'));
     }
 
@@ -141,6 +161,15 @@ class Students extends BaseController
         $where2=array('user_id'=>$id);
         $model->hapus('students',$where2);
         $model->hapus('users',$where);
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'user menghapus data murid',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         return redirect()->to(base_url('/students'));
     }
 

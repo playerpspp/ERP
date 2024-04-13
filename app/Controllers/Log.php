@@ -30,7 +30,7 @@ class Log extends BaseController
            
             $data['data']= $model->nika('log','karyawan','students','teachers','users',$on,$on2,$on3,$on4);
             }else{
-                $data['data']=$model->fusion_wDESC('log','users',$on, ['log.log_idUser' => session()->get('id')]);
+                $data['data']=$model->nika_w('log','karyawan','students','teachers','users',$on,$on2,$on3,$on4, ['log.log_idUser' => session()->get('id_user')]);
             }
        
 

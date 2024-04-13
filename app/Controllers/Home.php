@@ -56,6 +56,15 @@ if (session()->get('id_user') > 0) {
         session()->set('teacher_id', $teacher['teacher_id']);
         session()->set('name', $teacher['teacher_name']);
         session()->set('role', $cek['role']);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'User telah melakukan Login',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
         return redirect()->to('/user');
 
     }elseif (isset($student)){
@@ -63,6 +72,15 @@ if (session()->get('id_user') > 0) {
         session()->set('student_id', $student['student_id']);
         session()->set('name', $student['student_name']);
         session()->set('role', $cek['role']);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'User telah melakukan Login',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
         // session()->set('class_id', $student['class_id']);
         return redirect()->to('/home/dashboard');
 
@@ -71,6 +89,15 @@ if (session()->get('id_user') > 0) {
         session()->set('Karyawan_id', $petugas['id_kw']);
         session()->set('name', $petugas['nama']);
         session()->set('role', $cek['role']);
+
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'User telah melakukan Login',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
         return redirect()->to('/home/dashboard');
         }else{
             return redirect()->to(base_url('/home'));
@@ -79,6 +106,15 @@ if (session()->get('id_user') > 0) {
     }
     public function Logout()
     {
+        $model=new M_model();
+        $log = array(
+            'isi_log' => 'User telah melakukan Logout',
+            'log_idUser' => session()->get('id_user'),
+            
+        );
+
+        $model->simpan('log', $log);
+
         session()->destroy();
         return redirect()->to(base_url('/home'));
     }

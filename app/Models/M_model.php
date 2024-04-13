@@ -400,22 +400,33 @@ public function filter_f ($table,$awal,$akhir)
 		return $this->db->table($table1)->join($table2, $on, 'left')->join($table3, $on2, 'left')->join($table4, $on3, 'left')->get()->getResult();
 	}
 
-	public function nika($table1, $table2, $table3, $table4, $table5, $on, $on2, $on3, $on4)
-	{
-		return $this->db->table($table1)->join($table2, $on, 'left')
-										->join($table3, $on2, 'left')
-										->join($table4, $on3, 'left')
-										->join($table5, $on4, 'left')
-										->get()->getResult();
-	}
-
-	
-
 	public function ultra_w($table1, $table2, $table3, $table4, $on, $on2, $on3, $where)
 	{
 		return $this->db->table($table1)->join($table2, $on, 'left')->join($table3, $on2, 'left')->join($table4, $on3, 'left')->getwhere($where)->getResult();
 	}
 
+	public function nika($table1, $table2, $table3, $table4, $table5, $on, $on2, $on3, $on4)
+	{
+		$primaryKey = $this->db->getFieldData($table1)[0]->name;
+		return $this->db->table($table1)->join($table2, $on, 'left')
+										->join($table3, $on2, 'left')
+										->join($table4, $on3, 'left')
+										->join($table5, $on4, 'left')
+										->orderBy($table1.".".$primaryKey, 'desc')
+										->get()->getResult();
+	}
+
+	public function nika_w($table1, $table2, $table3, $table4, $table5, $on, $on2, $on3, $on4, $where)
+	{
+		$primaryKey = $this->db->getFieldData($table1)[0]->name;
+		// return $this->db->table($table1)->join($table2, $on)->orderBy($table1.".".$primaryKey, 'desc')->getWhere($where)->getResult();
+		return $this->db->table($table1)->join($table2, $on, 'left')
+										->join($table3, $on2, 'left')
+										->join($table4, $on3, 'left')
+										->join($table5, $on4, 'left')
+										->orderBy($table1.".".$primaryKey, 'desc')
+										->getWhere($where)->getResult();
+	}
 
 	public function relasiKategori()
 	{

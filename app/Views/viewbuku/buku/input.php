@@ -8,9 +8,9 @@
 
     <div class="card">
         <div class="card-body">
-        <a href="<?= base_url('/Buku')?>" class="btn btn-primary">Kembali</a></button>
+        <a href="<?= base_url('/BukuController')?>" class="btn btn-primary">Kembali</a></button>
             <div class="basic-form">
-                <form id="userForm" class="form-horizontal form-label-left" novalidate  action="<?= base_url('buku/aksi_input')?>" method="post">
+                <form id="userForm" class="form-horizontal form-label-left" novalidate  action="<?= base_url('BukuController/aksi_input')?>" method="post">
 
                  <div class="row">
                     <div class="mb-3 col-md-6">

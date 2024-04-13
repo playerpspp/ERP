@@ -30,7 +30,7 @@
                         class="form-control text-capitalize" autocomplete="on" >
                         <option value="">-</option>
                         <?php foreach($peminjam as $pinjam){ ?>
-                          <option value="<?= $pinjam->id_user?>"><?= $pinjam->namaLengkap?></option>
+                          <option value="<?= $pinjam->user_id?>"><?= $pinjam->student_name?></option>
                        <?php } ?>
                           </select>
                     </div>

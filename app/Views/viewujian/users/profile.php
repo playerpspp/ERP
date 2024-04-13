@@ -1,6 +1,6 @@
-<?= view('viewujian/head'); ?>
+<?= view('viewerp/layout/header'); ?>
 
-<?= view('viewujian/nav'); ?>
+<?= view('viewerp/layout/nav'); ?>
 
 <head>
     <title>Profile</title>
@@ -52,4 +52,4 @@
             </div>
         </div>
     </div>
-    <?= view('viewujian/footer'); ?>
+    <?= view('viewerp/layout/footer'); ?>

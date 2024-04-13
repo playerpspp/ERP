@@ -1,147 +1,181 @@
-<div class="col-md-12 col-sm-12 col-xs-12">
-  <div class="x_panel">
-    <div class="x_title">
-      
-      <h2>
-        <?php if ($kunci=='view_b') {
-          echo "Laporan Barang";
-        }else if ($kunci=='view_bm') {
-          echo "Laporan Barang Masuk";
-        }else{
-          echo "Laporan Transaksi";
-        }
-        ?>
-      </h2>
-      <ul class="nav navbar-right panel_toolbox">
-        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Settings 1</a>
-            </li>
-            <li><a href="#">Settings 2</a>
-            </li>
-          </ul>
-        </li>
-        <li><a class="close-link"><i class="fa fa-close"></i></a>
-        </li>
-      </ul>
-      <div class="clearfix"></div>
+<div class="content-wrap">
+    <div class="main">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="card">
+                        <div class="card-title">
+                            <h4>Laporan Barang</h4>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="basic-form">
+                                <form id="Laporanbuku" method="post" target="_blank">
+
+                                    <?php if(session()->has('error')): ?>
+                                        <div class="alert alert-danger">
+                                            <?= session()->getFlashdata('error') ?>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <div class="form-group">
+                                        <label>Tanggal awal</label>
+                                        <input required type="date" id="awal" name="awal"  class="form-control" >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Tanggal akhir</label>
+                                        <input required type="date" id="akhir" name="akhir"  class="form-control" >
+                                    </div>
+                                    
+                                        <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+                                    <a href="javascript:void(0);" onclick="generatePrintBarang()" class="btn btn-box btn-warning" title="Print"> <i class="fa fa-print"></i> Print</a>
+
+                                    <a href="javascript:void(0);" onclick="generatePDFBarang()" class="btn btn-box btn-danger" title="PDF"> <i class="fa fa-file-pdf-o"></i> PDF</a>
+
+                                    <a href="javascript:void(0);" onclick="generateExcelBarang()" class="btn btn-box btn-success" title="Excel"> <i class="fa fa-file-excel-o"></i> Excel</a>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card">
+                        <div class="card-title">
+                            <h4>Laporan Barang Masuk</h4>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="basic-form">
+                                <form id="Laporanbuku" method="post" target="_blank">
+
+                                    <?php if(session()->has('error')): ?>
+                                        <div class="alert alert-danger">
+                                            <?= session()->getFlashdata('error') ?>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <div class="form-group">
+                                        <label>Tanggal awal</label>
+                                        <input required type="date" id="awal" name="awal"  class="form-control" >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Tanggal akhir</label>
+                                        <input required type="date" id="akhir" name="akhir"  class="form-control" >
+                                    </div>
+                                    
+                                        <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+                                    <a href="javascript:void(0);" onclick="generatePrintBarang_masuk()" class="btn btn-box btn-warning" title="Print"> <i class="fa fa-print"></i> Print</a>
+
+                                    <a href="javascript:void(0);" onclick="generatePDFBarang_masuk()" class="btn btn-box btn-danger" title="PDF"> <i class="fa fa-file-pdf-o"></i> PDF</a>
+
+                                    <a href="javascript:void(0);" onclick="generateExcelBarang_masuk()" class="btn btn-box btn-success" title="Excel"> <i class="fa fa-file-excel-o"></i> Excel</a>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="card">
+                        <div class="card-title">
+                            <h4>Laporan Barang Keluar</h4>
+
+                        </div>
+                        <div class="card-body">
+                            <div class="basic-form">
+                                <form id="Laporanbuku" method="post" target="_blank">
+
+                                    <?php if(session()->has('error')): ?>
+                                        <div class="alert alert-danger">
+                                            <?= session()->getFlashdata('error') ?>
+                                        </div>
+                                    <?php endif; ?>
+
+                                    <div class="form-group">
+                                        <label>Tanggal awal</label>
+                                        <input required type="date" id="awal" name="awal"  class="form-control" >
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label>Tanggal akhir</label>
+                                        <input required type="date" id="akhir" name="akhir"  class="form-control" >
+                                    </div>
+                                    
+                                        <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+                                    <a href="javascript:void(0);" onclick="generatePrintBarang_keluar()" class="btn btn-box btn-warning" title="Print"> <i class="fa fa-print"></i> Print</a>
+
+                                    <a href="javascript:void(0);" onclick="generatePDFBarang_keluar()" class="btn btn-box btn-danger" title="PDF"> <i class="fa fa-file-pdf-o"></i> PDF</a>
+
+                                    <a href="javascript:void(0);" onclick="generateExcelBarang_keluar()" class="btn btn-box btn-success" title="Excel"> <i class="fa fa-file-excel-o"></i> Excel</a>
+
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+		</div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="x_content">
-      
-      <form class="form-horizontal form-label-left" novalidate
 
-      action="
-      <?php if ($kunci=='view_b') {
-        echo base_url('home/cari_b');
-      }else if ($kunci=='view_bm') {
-        echo base_url('home/cari_bm');
-      }else{
-        echo base_url('home/cari_p');
-      }
-    ?>" method="post">
+    <script>
 
-    <div class="item form-group">
-      <label class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal awal 
-      </label>
-      <div class="col-md-6 col-sm-6 col-xs-12">
-        <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="awal" placeholder="" required="required" type="date">
-      </div>
-    </div>
-    <div class="item form-group">
-      <label class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal akhir
-      </label>
-      <div class="col-md-6 col-sm-6 col-xs-12">
-        <input type="date" id="kode" name="akhir" required="required" placeholder="" class="form-control col-md-7 col-xs-12">
-      </div>
-    </div>
-    <div class="form-group">
-      <div class="col-md-6 col-md-offset-3">
-        <button id="send" type="submit" class="btn btn-warning"><i class="fa fa-print"></i></button>
-      </div>
-    </div>
-  </form>
-      
-
-  <div class="ln_solid"></div>
-      
-
-  <form class="form-horizontal form-label-left" novalidate
-
-  action="
-  <?php if ($kunci=='view_b') {
-    echo base_url('home/pdf_b');
-  }else if ($kunci=='view_bm') {
-    echo base_url('home/pdf_bm');
-  }else{
-    echo base_url('home/pdf_p');
-  }
-?>" method="post">
-
-<div class="item form-group">
-  <label class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal awal 
-  </label>
-  <div class="col-md-6 col-sm-6 col-xs-12">
-    <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="awal" placeholder="" required="required" type="date">
-  </div>
-</div>
-<div class="item form-group">
-  <label class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal akhir
-  </label>
-  <div class="col-md-6 col-sm-6 col-xs-12">
-    <input type="date" id="kode" name="akhir" required="required" placeholder="" class="form-control col-md-7 col-xs-12">
-  </div>
-</div>
-<div class="form-group">
-  <div class="col-md-6 col-md-offset-3">
-    <button type="submit" class="btn btn-danger"><i class="fa fa-file-pdf-o"></i></button>
-  </div>
-</div>
-</form>
-      
-
-<div class="ln_solid"></div>
-      
-
-<form class="form-horizontal form-label-left" novalidate
-
-action="
-<?php if ($kunci=='view_b') {
-  echo base_url('home/excel_b');
-}else if ($kunci=='view_bm') {
-  echo base_url('home/excel_bm');
-}else{
-  echo base_url('home/excel_p');
+function generatePrintBarang() {
+    var form = document.getElementById("Laporanbuku");
+    form.action = "/koperasi/cari_b";
+    form.submit();
 }
-?>" method="post">
 
-<div class="item form-group">
-  <label class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal awal 
-  </label>
-  <div class="col-md-6 col-sm-6 col-xs-12">
-    <input id="name" class="form-control col-md-7 col-xs-12" data-validate-length-range="6" data-validate-words="2" name="awal" placeholder="" required="required" type="date">
-  </div>
-</div>
-<div class="item form-group">
-  <label class="control-label col-md-3 col-sm-3 col-xs-12">Tanggal akhir
-  </label>
-  <div class="col-md-6 col-sm-6 col-xs-12">
-    <input type="date" id="kode" name="akhir" required="required" placeholder="" class="form-control col-md-7 col-xs-12">
-  </div>
-</div>
-<div class="form-group">
-  <div class="col-md-6 col-md-offset-3">
-    <button type="submit" class="btn btn-success"><i class="fa fa-file-excel-o"></i></button>
-  </div>
-</div>
-</form>
-<div class="ln_solid"></div>
+  function generatePDFBarang() {
+    var form = document.getElementById("Laporanbuku");
+    form.action = "/koperasi/pdf_b";
+    form.submit();
+}
 
-<button onclick="history.back()" class="btn btn-primary"><i class="fa fa-undo"></i> </button>
+function generateExcelBarang() {
+    var form = document.getElementById("Laporanbuku");
+    form.action = "/koperasi/excel_b";
+    form.submit();
+}
+
+function generatePrintBarang_masuk() {
+    var form = document.getElementById("Laporanbuku");
+    form.action = "/koperasi/cari_bm";
+    form.submit();
+}
+
+  function generatePDFBarang_masuk() {
+    var form = document.getElementById("Laporanbuku");
+    form.action = "/koperasi/pdf_bm";
+    form.submit();
+}
+
+function generateExcelBarang_masuk() {
+    var form = document.getElementById("Laporanbuku");
+    form.action = "/koperasi/excel_bm";
+    form.submit();
+}
+
+function generatePrintBarang_keluar() {
+    var form = document.getElementById("Laporanbuku");
+    form.action = "/koperasi/cari_p";
+    form.submit();
+}
+
+  function generatePDFBarang_keluar() {
+    var form = document.getElementById("Laporanbuku");
+    form.action = "/koperasi/pdf_p";
+    form.submit();
+}
+
+function generateExcelBarang_keluar() {
+    var form = document.getElementById("Laporanbuku");
+    form.action = "/koperasi/excel_p";
+    form.submit();
+}
 
 
-</div>
-</div>
-</div>
+
+</script>

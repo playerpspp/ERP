@@ -41,7 +41,7 @@
 							<td>
 							<div class="text-center mb-1">
 
-                            <a href="<?= base_url('/buku/Ulasan/'.$dataa->bukuID) ?>" class="btn btn-primary">
+                            <a href="<?= base_url('/BukuController/Ulasan/'.$dataa->bukuID) ?>" class="btn btn-primary">
 										Ulasan
 									</a>
                               

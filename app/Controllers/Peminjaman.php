@@ -8,7 +8,7 @@ class Peminjaman extends BaseController
 {
     protected function checkAuth()
     {
-        $id_user = session()->get('id');
+        $id_user = session()->get('id_user');
         $role = session()->get('role');
         if ($id_user != null) {
             return true;
@@ -25,11 +25,11 @@ class Peminjaman extends BaseController
 
         $model = new M_model();
         $on="peminjaman.bukuID_peminjaman=buku.bukuID";
-        $on2="peminjaman.userID=users.id_user";
-        if(session()->get('role') != "peminjam"){
-        $data['data']= $model->super('peminjaman','buku','users',$on,$on2);
+        $on2="peminjaman.userID=students.user_id";
+        if(session()->get('role') != "students"){
+        $data['data']= $model->super('peminjaman','buku','students',$on,$on2);
         }else{
-            $data['data']= $model->super_w('peminjaman','buku','users',$on,$on2, ['userID' => session()->get('id')]);
+            $data['data']= $model->super_w('peminjaman','buku','students',$on,$on2, ['userID' => session()->get('id')]);
         }
         // $data['kategori']= $model->relasiKategori();
         echo view('viewbuku/peminjaman/peminjaman',$data);
@@ -45,7 +45,7 @@ class Peminjaman extends BaseController
         $model = new M_model();
         $on="buku.bukuID=peminjaman.bukuID_peminjaman";
         $data['data']= $model->tampil('buku');
-        $data['peminjam']= $model->getWhere('users',['role' => "peminjam"]);
+        $data['peminjam']= $model->tampil('students');
         // print_r($data);
         echo view('viewbuku/peminjaman/input',$data);
     }

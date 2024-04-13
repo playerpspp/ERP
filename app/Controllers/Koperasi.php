@@ -9,7 +9,7 @@ use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
 
 
 
-class Inventaris extends BaseController
+class Koperasi extends BaseController
 {
 
     protected function checkAuth($lock)
@@ -23,16 +23,14 @@ class Inventaris extends BaseController
 
     switch ($lock) {
         case 'admin':
-        case 'teacher':
         case 'petugas':
-        case 'student':
             if ($id_user != null && $role == $lock) {
                 return true;
             } else {
                 return false;
             }
         case 'everyone':
-            if ($id_user != null) {
+            if ($id_user != null && $role != "students" && $role != "teachers") {
                 return true;
             } else {
                 return false;
@@ -48,7 +46,7 @@ class Inventaris extends BaseController
 public function index()
 {
     if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+        return redirect()->to(base_url('/Koperasi'));
     }
         $model=new M_model();
 
@@ -78,7 +76,7 @@ public function index()
     public function Exit()
     {
         if (!$this->checkAuth("everyone")) {
-            return redirect()->to(base_url('/Inventaris'));
+            return redirect()->to(base_url('/Koperasi'));
         }
 
          return redirect()->to('/');
@@ -92,8 +90,8 @@ public function index()
 
 public function t_barang()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -113,7 +111,7 @@ public function t_barang()
 public function t_masuk()
 {
     if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -134,7 +132,7 @@ public function t_masuk()
 public function t_jual()
 {
     if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -161,8 +159,8 @@ public function t_jual()
 
 public function tambah_b()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -182,7 +180,7 @@ public function tambah_b()
 public function tambah_bm()
 {
     if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -202,7 +200,7 @@ public function tambah_bm()
 public function tambah_trans()
 {
     if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -238,7 +236,7 @@ public function aksi_tambah_b()
         'id_user'=>$id,
     );
     $model->simpan('barang',$data);
-    return redirect()->to('/Inventaris/t_barang');
+    return redirect()->to('/Koperasi/t_barang');
 }
 
 public function aksi_tambah_bm()
@@ -258,7 +256,7 @@ public function aksi_tambah_bm()
         'id_user'=>$id,
     );
     $model->simpan('barang_masuk',$data);
-    return redirect()->to('Home/t_masuk');
+    return redirect()->to('/Koperasi/t_masuk');
 }
 
 
@@ -278,7 +276,7 @@ public function aksi_tambah_trans()
         'id_user'=>$id,
     );
     $model->simpan('transaksi',$data);
-    return redirect()->to('Home/t_jual');
+    return redirect()->to('/Koperasi/t_jual');
 }
 
 
@@ -286,8 +284,8 @@ public function aksi_tambah_trans()
 
 public function edit_b($id)
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -323,112 +321,66 @@ public function aksi_edit_b()
     );
     $where=array('id_brg'=>$id);
     $model->edit('barang',$data,$where);
-    return redirect()->to('/Inventaris/t_barang');
+    return redirect()->to('/Koperasi/t_barang');
 }
 
 //<----------------------------------------------------Hapus Tabel--------------------------------------------------------------------->
 
 public function hapus_b($id)
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
         $where=array('id_brg'=>$id);
         $model->hapus('barang',$where);
-        return redirect()->to('Home/t_barang');
+        return redirect()->to('/Koperasi/t_barang');
 
     
 }
 
 public function hapus_bm($id)
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
         $where=array('id_msk'=>$id);
         $model->hapus('barang_masuk',$where);
-        return redirect()->to('Home/t_masuk');
+        return redirect()->to('/Koperasi/t_masuk');
 
     
 }
 
 public function hapus_bj($id)
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
         $where=array('id_trans'=>$id);
         $model->hapus('transaksi',$where);
-        return redirect()->to('Home/t_jual');
+        return redirect()->to('/Koperasi/t_jual');
 
     
 }
 
 
 
-//<---------------------------------------------------------Laporan Tabel----------------------------------------------------------->
+//<---------------------------------------------------------Laporan----------------------------------------------------------->
 
-public function l_brg()
+public function laporan()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
-
-        $model=new M_model();
-        $data['kunci']='view_b';
-
         
-
-        
-        echo view('viewpos/header',$data);
-        echo view('viewpos/menu',$data);
-        echo view('viewpos/filter',$data);
-        echo view('viewpos/footer');
-
-    
-}
-
-public function l_masuk()
-{
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
-    }
-
-        $model=new M_model();
-        $data['kunci']='view_bm';
-
-        
-
-        
-        echo view('viewpos/header',$data);
-        echo view('viewpos/menu',$data);
-        echo view('viewpos/filter',$data);
-        echo view('viewpos/footer');
-
-    
-}
-
-public function l_penjualan()
-{
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
-    }
-
-        $model=new M_model();
-        $data['kunci']='view_p';
-
-        
-
-        
-        echo view('viewpos/header',$data);
-        echo view('viewpos/menu',$data);
-        echo view('viewpos/filter',$data);
+        echo view('viewpos/header');
+        echo view('viewpos/menu');
+        echo view('viewpos/filter');
         echo view('viewpos/footer');
 
     
@@ -438,8 +390,8 @@ public function l_penjualan()
 
 public function cari_b()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -458,8 +410,8 @@ public function cari_b()
 
 public function cari_bm()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -478,8 +430,8 @@ public function cari_bm()
 
 public function cari_p()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -501,8 +453,8 @@ public function cari_p()
 
 public function excel_b()
 {
- if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+ if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
     $model=new M_model();
@@ -548,8 +500,8 @@ public function excel_b()
 }
 public function excel_bm()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -595,8 +547,8 @@ public function excel_bm()
 }
 public function excel_p()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -644,8 +596,8 @@ public function excel_p()
 
 public function pdf_b()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -670,8 +622,8 @@ public function pdf_b()
 
 public function pdf_bm()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -697,8 +649,8 @@ public function pdf_bm()
 
 public function pdf_p()
 {
-    if (!$this->checkAuth("everyone")) {
-        return redirect()->to(base_url('/Inventaris'));
+    if (!$this->checkAuth("admin")) {
+        return redirect()->to(base_url('/Koperasi'));
     }
 
         $model=new M_model();
@@ -716,7 +668,7 @@ public function pdf_p()
         $dompdf->loadHtml(view('viewpos/c_p',$data));
         $dompdf->setPaper('A4', 'landscape');
         $dompdf->render();
-        $dompdf->stream('Daftar Pengembalian.pdf',array('Attachment'=>0));
+        $dompdf->stream('Daftar Transaksi.pdf',array('Attachment'=>0));
 
     
 }

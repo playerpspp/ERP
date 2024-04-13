@@ -39,7 +39,7 @@
 						<tr>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $no++ ?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->judul ?></td>
-							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->namaLengkap ?></td>
+							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->student_name ?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->tanggalPeminjaman ?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->tanggalPengembalian ?></td>
                             <td style="text-align: center;" class="text-capitalize">

@@ -1,27 +1,15 @@
-<div class="col-md-12 col-sm-12 col-xs-12">
-  <div class="x_panel">
-    <div class="x_title">
-      <h2>Barang</h2>
-      <ul class="nav navbar-right panel_toolbox">
-        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-        </li>
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-          <ul class="dropdown-menu" role="menu">
-            <li><a href="#">Settings 1</a>
-            </li>
-            <li><a href="#">Settings 2</a>
-            </li>
-          </ul>
-        </li>
-        <li><a class="close-link"><i class="fa fa-close"></i></a>
-        </li>
-      </ul>
-      <div class="clearfix"></div>
-    </div>
-    <div class="x_content">
+<div class="row">
 
-      <form class="form-horizontal form-label-left" novalidate  action="<?= base_url('home/aksi_tambah_b')?>" method="post">
+    <div class="col-lg-12">
+    <a href="javascript:history.back()" class="btn btn-primary">Kembali</a></button>
+        <div class="card">
+        <div class="card-title">
+      <p>Tambah Barang</p>
+      
+      </div>
+
+<div class="card-body">
+      <form class="form-horizontal form-label-left" novalidate  action="<?= base_url('Koperasi/aksi_tambah_b')?>" method="post">
 
 
         <div class="item form-group">
@@ -50,7 +38,6 @@
       <div class="ln_solid"></div>
       <div class="form-group">
         <div class="col-md-6 col-md-offset-3">
-          <button type="submit" class="btn btn-primary">Cancel</button>
           <button id="send" type="submit" class="btn btn-success">Submit</button>
         </div>
       </div>

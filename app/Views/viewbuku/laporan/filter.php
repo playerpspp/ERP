@@ -34,9 +34,9 @@
                                     </div>
                                     
                                         <!-- <button type="submit" class="btn btn-default">Submit</button> -->
-                                    <a href="javascript:void(0);" onclick="generatePrintBuku()" class="btn btn-box btn-warning" title="Print"> <i class="ti-file"></i> Print</a>
+                                    <a href="javascript:void(0);" onclick="generatePrintBuku()" class="btn btn-box btn-warning" title="Print"> <i class="fa fa-print"></i> Print</a>
 
-                                    <a href="javascript:void(0);" onclick="generatePDBukun()" class="btn btn-box btn-danger" title="PDF"> <i class="ti-file"></i> PDF</a>
+                                    <a href="javascript:void(0);" onclick="generatePDBukun()" class="btn btn-box btn-danger" title="PDF"> <i class="fa fa-file-pdf-o"></i> PDF</a>
 
                                 </form>
                             </div>

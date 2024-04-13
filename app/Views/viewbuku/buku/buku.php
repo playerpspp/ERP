@@ -12,11 +12,12 @@
 
         <div class="card-body">
 			<?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
-        <a href="<?= base_url('/buku/input')?>"> <button type="button" class="btn btn-success" >
+        <a href="<?= base_url('/BukuController/input')?>"> <button type="button" class="btn btn-success" >
 										Tambah buku
 									</button> </a>
 									<?php } ?>
-        <table id="bootstrap-data-table" class="table table-striped table-bordered">					<thead>
+        <table id="bootstrap-data-table" class="table table-striped table-bordered">	
+					<thead>
 						<tr>
 							<th style="text-align: center;" width="1000px">No.</th>
 							<th style="text-align: center;" width="1000px">Judul</th>
@@ -49,7 +50,7 @@
 							<td>
 							<div class="text-center mb-1">
 
-                            <a href="<?= base_url('/buku/Ulasan/'.$dataa->bukuID) ?>" class="btn btn-primary">
+                            <a href="<?= base_url('/BukuController/Ulasan/'.$dataa->bukuID) ?>" class="btn btn-primary">
 										Ulasan
 									</a>
 									<?php  if(session()->get('role')== "student"){ ?>
@@ -63,10 +64,10 @@
 									</a>
 									<?php } } ?>
 									<?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
-									<a href="<?= base_url('/buku/edit/'.$dataa->bukuID) ?>" class="btn btn-warning">
+									<a href="<?= base_url('/BukuController/edit/'.$dataa->bukuID) ?>" class="btn btn-warning">
 										Edit
 									</a>
-									<a href="<?= base_url('/buku/hapus/'.$dataa->bukuID)?>"><button type="button" class="btn btn-danger" >
+									<a href="<?= base_url('/BukuController/hapus/'.$dataa->bukuID)?>"><button type="button" class="btn btn-danger" >
 										Delete
 									</button> </a>
 									<?php } ?>

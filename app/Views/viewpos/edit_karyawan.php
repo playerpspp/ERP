@@ -21,7 +21,7 @@
     </div>
     <div class="x_content">
 
-      <form class="form-horizontal form-label-left" novalidate  action="<?= base_url('home/aksi_edit_karyawan')?>" method="post">
+      <form class="form-horizontal form-label-left" novalidate  action="<?= base_url('Koperasi/aksi_edit_karyawan')?>" method="post">
         <input type="hidden" name="id" value="<?= $duar->id_user ?>">
 
         <div class="item form-group">

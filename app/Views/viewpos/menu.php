@@ -3,9 +3,9 @@
         <div class="nano-content">
             <ul>
                 <div class="logo"><a href="index.html">
-                    <!-- <img src="images/logo.png" alt="" /> --><span>Inventaris</span></a></div>
+                    <!-- <img src="images/logo.png" alt="" /> --><span>Koperasi</span></a></div>
                     <li class="label">Dashboard</li>
-                    <li><a href="<?= base_url('/Inventaris/dashboard')?>"><i class="ti-dashboard"></i> Dashboard </a></li>
+                    <li><a href="<?= base_url('/Koperasi')?>"><i class="ti-dashboard"></i> Dashboard </a></li>
                     <br>
                     <li class="label">Features</li>
                
@@ -13,9 +13,9 @@
                       <li><a class="sidebar-sub-toggle"><i class="ti-server"></i> Data <span
                           class="sidebar-collapse-icon ti-angle-down"></span></a>
                           <ul>
-                          <li><a href="<?= base_url('/Inventaris/t_barang')?>">Barang</a></li>
-                          <li><a href="<?= base_url('/Inventaris/t_masuk')?>">Barang masuk</a></li>
-                          <li><a href="<?= base_url('/Inventaris/t_jual')?>">Barang Keluar</a></li>
+                          <li><a href="<?= base_url('/Koperasi/t_barang')?>">Barang</a></li>
+                          <li><a href="<?= base_url('/Koperasi/t_masuk')?>">Barang masuk</a></li>
+                          <li><a href="<?= base_url('/Koperasi/t_jual')?>">Barang Keluar</a></li>
                               
                           </ul>
                       </li>
@@ -25,14 +25,7 @@
 
                 <?php  if(session()->get('role')== "admin" ) { ?>
 
-                <li><a class="sidebar-sub-toggle"><i class="ti-book"></i> Laporan <span
-                    class="sidebar-collapse-icon ti-angle-down"></span></a>
-                    <ul>
-                      <li><a href="<?= base_url('/Inventaris/l_brg')?>">Barang</a></li>
-                      <li><a href="<?= base_url('/Inventaris/l_masuk')?>">Barang Masuk</a></li>
-                      <li><a href="<?= base_url('/Inventaris/l_penjualan')?>">Penjualan</a></li>
-                    </ul>
-                </li>
+                    <li><a href="<?= base_url('/koperasi/laporan')?>"><i class="ti-book"></i> Laporan </a></li>
 
               <?php  } ?>
 

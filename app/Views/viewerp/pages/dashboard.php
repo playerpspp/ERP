@@ -12,7 +12,7 @@
 
         <div class="card-body">
         <?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
-            <a href="<?= base_url('/Inventaris')?>">        <button class="btn btn-primary">Inventaris</button></a>
+            <a href="<?= base_url('/Koperasi')?>">        <button class="btn btn-primary">Koperasi</button></a>
             <?php }?>
 
             <?php  if(session()->get('role')!= "teacher" ){ ?>

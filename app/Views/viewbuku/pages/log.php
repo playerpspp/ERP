@@ -1,6 +1,6 @@
-<?= view('viewbuku/layout/header')?>
+<?= view('viewerp/layout/header')?>
 
-<?= view('viewbuku/layout/nav')?>
+<?= view('viewerp/layout/nav')?>
 
 <div class="row">
 
@@ -27,7 +27,15 @@
                     foreach ($data as $dataa){?>
 						<tr>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $no++ ?></td>
-							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->namaLengkap ?></td>
+							<td style="text-align: center;" class="text-capitalize"><?php 
+							if($dataa->role == 'admin' || $dataa->role == 'petugas'){
+								echo $dataa->nama ;
+							}elseif($dataa->role == 'teachers'){
+								echo $data->teacher_name;
+							}elseif($dataa->role == 'students'){
+								echo $data->student_name;
+							}
+							?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->isi_log ?></td>
 							<td style="text-align: center;" class="text-capitalize"><?php echo $dataa->tanggal_log ?></td>
 							
@@ -46,16 +54,8 @@
 
     </div>
 
-   
-
-
-
-
-
-
-
 </div>
 
 
-<?= view('viewbuku/layout/footer')?>
+<?= view('viewerp/layout/footer')?>
 

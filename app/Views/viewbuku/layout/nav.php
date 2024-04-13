@@ -5,7 +5,7 @@
                 <div class="logo"><a href="index.html">
                     <!-- <img src="images/logo.png" alt="" /> --><span>Perpustakaan Sekolah</span></a></div>
                     <li class="label">Dashboard</li>
-                    <li><a href="/home/dashboard"><i class="ti-dashboard"></i> Dashboard </a></li>
+                    <li><a href="/BukuController/dashboard"><i class="ti-dashboard"></i> Dashboard </a></li>
                     <br>
                     <li class="label">Features</li>
                     
@@ -14,7 +14,7 @@
                 <li><a class="sidebar-sub-toggle"><i class="ti-server"></i> Buku <span
                     class="sidebar-collapse-icon ti-angle-down"></span></a>
                     <ul>
-                    <li><a href="<?= base_url('/buku')?>">Daftar Buku</a></li>
+                    <li><a href="<?= base_url('/BukuController')?>">Daftar Buku</a></li>
                      <?php  if(session()->get('role')== "admin"){ ?>
                     <li><a href="<?= base_url('/Kategori')?>">Kategori Buku</a></li>
                     <?php }?>

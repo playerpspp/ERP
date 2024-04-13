@@ -26,7 +26,7 @@
                     class="sidebar-collapse-icon ti-angle-down"></span></a>
                     <ul>
                      <?php  if(session()->get('role')== "admin" || session()->get('role')== "petugas"){ ?>
-                    <li><a href="<?= base_url('/Inventaris')?>">Inventaris</a></li>
+                    <li><a href="<?= base_url('/Koperasi')?>">Koperasi</a></li>
                     <?php }?>
                     <?php  if(session()->get('role')!= "teacher" ){ ?>
                     <li><a href="<?= base_url('/BukuController/dashboard')?>">Perpustakaan</a></li>

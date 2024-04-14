@@ -153,7 +153,7 @@ class Classes extends BaseController
         $model=new M_model();
 
         $name= $this->request->getPost('name');
-        $student = $this->request->getPost('student');
+        $student_name = $this->request->getPost('student');
         $id= $this->request->getPost('id');
 
         $where=array('class_id'=>$id);
@@ -163,15 +163,16 @@ class Classes extends BaseController
         // print_r($this->request->getPost());
         $model->edit('classes', $class, $where);
 
-        $where = array('student_name' => $student);
-        $data = $model->like_row('students', $where);
+        $where ="'student_name' ,". $student_name;
+        $student = $model->like_row('students', $student_name, 'student_name');
             $student_data = array(
-                'student_id' => $student->student_id,
+                'student_id' => $student['student_id'],
                 'class_id' => $id
             );
             $model->simpan('student_class_bridge', $student_data);
 
             $model=new M_model();
+            // print_r($student_data);
         $log = array(
             'isi_log' => 'user megedit data kelas',
             'log_idUser' => session()->get('id_user'),

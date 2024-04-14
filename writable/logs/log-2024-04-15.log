@@ -1,0 +1,129 @@
+ERROR - 2024-04-15 01:22:44 --> Column 'log_idUser' cannot be null
+ERROR - 2024-04-15 01:24:31 --> Column 'log_idUser' cannot be null
+ERROR - 2024-04-15 01:25:04 --> Column 'log_idUser' cannot be null
+CRITICAL - 2024-04-15 01:25:04 --> Invalid argument supplied for foreach()
+#0 C:\BARANG ERP\ERP\app\Views\viewbuku\buku\buku.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\BARANG ERP\\E...', 45, Array)
+#1 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#2 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewbuku/buku/b...', Array, true)
+#4 C:\BARANG ERP\ERP\app\Controllers\BukuController.php(51): view('viewbuku/buku/b...', Array)
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\BukuController->index()
+#6 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuController))
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#10 {main}
+ERROR - 2024-04-15 01:25:20 --> Column 'log_idUser' cannot be null
+CRITICAL - 2024-04-15 01:25:20 --> Invalid argument supplied for foreach()
+#0 C:\BARANG ERP\ERP\app\Views\viewbuku\buku\buku.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\BARANG ERP\\E...', 45, Array)
+#1 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#2 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewbuku/buku/b...', Array, true)
+#4 C:\BARANG ERP\ERP\app\Controllers\BukuController.php(51): view('viewbuku/buku/b...', Array)
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\BukuController->index()
+#6 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuController))
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#10 {main}
+CRITICAL - 2024-04-15 01:25:28 --> Invalid argument supplied for foreach()
+#0 C:\BARANG ERP\ERP\app\Views\viewbuku\buku\buku.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\BARANG ERP\\E...', 45, Array)
+#1 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#2 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewbuku/buku/b...', Array, true)
+#4 C:\BARANG ERP\ERP\app\Controllers\BukuController.php(51): view('viewbuku/buku/b...', Array)
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\BukuController->index()
+#6 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuController))
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#10 {main}
+CRITICAL - 2024-04-15 01:25:30 --> Invalid argument supplied for foreach()
+#0 C:\BARANG ERP\ERP\app\Views\viewbuku\buku\buku.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\BARANG ERP\\E...', 45, Array)
+#1 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#2 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewbuku/buku/b...', Array, true)
+#4 C:\BARANG ERP\ERP\app\Controllers\BukuController.php(51): view('viewbuku/buku/b...', Array)
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\BukuController->index()
+#6 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuController))
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#10 {main}
+CRITICAL - 2024-04-15 01:26:29 --> Invalid argument supplied for foreach()
+#0 C:\BARANG ERP\ERP\app\Views\viewbuku\buku\buku.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\BARANG ERP\\E...', 45, Array)
+#1 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#2 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewbuku/buku/b...', Array, true)
+#4 C:\BARANG ERP\ERP\app\Controllers\BukuController.php(51): view('viewbuku/buku/b...', Array)
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\BukuController->index()
+#6 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuController))
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#10 {main}
+CRITICAL - 2024-04-15 01:27:04 --> Invalid argument supplied for foreach()
+#0 C:\BARANG ERP\ERP\app\Views\viewbuku\buku\buku.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\BARANG ERP\\E...', 45, Array)
+#1 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#2 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewbuku/buku/b...', Array, true)
+#4 C:\BARANG ERP\ERP\app\Controllers\BukuController.php(51): view('viewbuku/buku/b...', Array)
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\BukuController->index()
+#6 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuController))
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#10 {main}
+CRITICAL - 2024-04-15 01:27:07 --> Invalid argument supplied for foreach()
+#0 C:\BARANG ERP\ERP\app\Views\viewbuku\buku\buku.php(45): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Invalid argumen...', 'C:\\BARANG ERP\\E...', 45, Array)
+#1 C:\BARANG ERP\ERP\system\View\View.php(210): include('C:\\BARANG ERP\\E...')
+#2 C:\BARANG ERP\ERP\system\View\View.php(213): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+#3 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('viewbuku/buku/b...', Array, true)
+#4 C:\BARANG ERP\ERP\app\Controllers\BukuController.php(51): view('viewbuku/buku/b...', Array)
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\BukuController->index()
+#6 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\BukuController))
+#7 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#9 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#10 {main}
+ERROR - 2024-04-15 01:28:29 --> Column 'log_idUser' cannot be null
+ERROR - 2024-04-15 01:28:41 --> Column 'log_idUser' cannot be null
+ERROR - 2024-04-15 01:29:31 --> Column 'log_idUser' cannot be null
+ERROR - 2024-04-15 01:29:42 --> Column 'log_idUser' cannot be null
+ERROR - 2024-04-15 02:06:54 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' ,tes LIKE '%%' ESCAPE '!'' at line 3
+CRITICAL - 2024-04-15 02:06:54 --> Call to a member function getRowArray() on bool
+#0 C:\BARANG ERP\ERP\app\Controllers\Classes.php(167): App\Models\M_model->like_row('students', 'student_name' ,...')
+#1 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Classes->actedit()
+#2 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Classes))
+#3 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#6 {main}
+ERROR - 2024-04-15 02:07:08 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'tes LIKE '%%' ESCAPE '!'' at line 3
+CRITICAL - 2024-04-15 02:07:08 --> Call to a member function getRowArray() on bool
+#0 C:\BARANG ERP\ERP\app\Controllers\Classes.php(167): App\Models\M_model->like_row('students', ''student_name' ...')
+#1 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Classes->actedit()
+#2 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Classes))
+#3 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#6 {main}
+ERROR - 2024-04-15 02:08:48 --> You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'tes LIKE '%%tes%%' ESCAPE '!'' at line 3
+CRITICAL - 2024-04-15 02:08:48 --> Call to a member function getRowArray() on bool
+#0 C:\BARANG ERP\ERP\app\Controllers\Classes.php(167): App\Models\M_model->like_row('students', 'tes', ''student_name' ...')
+#1 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Classes->actedit()
+#2 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Classes))
+#3 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#4 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#5 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#6 {main}
+CRITICAL - 2024-04-15 02:12:25 --> Invalid file: exams/ready.php
+#0 C:\BARANG ERP\ERP\system\View\View.php(198): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('exams/ready.php')
+#1 C:\BARANG ERP\ERP\system\Common.php(1089): CodeIgniter\View\View->render('exams/ready', Array, true)
+#2 C:\BARANG ERP\ERP\app\Controllers\Exams.php(337): view('exams/ready', Array)
+#3 C:\BARANG ERP\ERP\system\CodeIgniter.php(832): App\Controllers\Exams->ready('149')
+#4 C:\BARANG ERP\ERP\system\CodeIgniter.php(419): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Exams))
+#5 C:\BARANG ERP\ERP\system\CodeIgniter.php(326): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#6 C:\BARANG ERP\ERP\public\index.php(37): CodeIgniter\CodeIgniter->run()
+#7 C:\BARANG ERP\ERP\system\Commands\Server\rewrite.php(43): require_once('C:\\BARANG ERP\\E...')
+#8 {main}

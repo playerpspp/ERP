@@ -50,7 +50,7 @@ class Exams extends BaseController
         elseif (session()->get('role') == 'teacher') 
         {
             $id = session()->get('teacher_id');
-            $where =array('exams.teacher_id'=>$id, 'classes.teacher_id'=>$id);        
+            $where =array('exams.teacher_id'=>$id);        
             // print_r($where);
             $exams['exams']= $model->super_w('exams','classes','teachers',$on,$on2,$where);
 
@@ -125,10 +125,10 @@ class Exams extends BaseController
         
         $class['classes'] = $model->tampil('classes');
         
-        $id = session()->get('teacher_id');
-        $where =array('classes.teacher_id'=>$id);        
+        // $id = session()->get('teacher_id');
+        // $where =array('classes.teacher_id'=>$id);        
             // print_r($where);
-        $class['classes'] = $model->getwhere('classes', $where);
+        // $class['classes'] = $model->getwhere('classes', $where);
 
         echo view('viewujian/exams/input',$class);
     }
@@ -334,7 +334,7 @@ class Exams extends BaseController
         $where2=array('exam_id'=>$id, 'student_id'=> session()->get('student_id'));
         $ready['check'] = $model->getRow('exam_students', $where2);
 
-        return view('exams/ready',$ready);
+        return view('viewujian/exams/ready',$ready);
 
     }
 

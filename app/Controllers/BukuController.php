@@ -110,7 +110,7 @@ class BukuController extends BaseController
         );
 
         $model->simpan('log', $log);
-        return redirect()->to('/buku');
+        return redirect()->to('/bukuController');
 
     }
 
@@ -160,7 +160,7 @@ class BukuController extends BaseController
         );
 
         $model->simpan('log', $log);
-        return redirect()->to('/buku');
+        return redirect()->to('/bukuController');
 
 
     }
@@ -185,7 +185,7 @@ class BukuController extends BaseController
 
         $model->simpan('log', $log);
 
-        return redirect()->to('/buku');
+        return redirect()->to('/bukuController');
 
         
     }

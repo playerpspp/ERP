@@ -40,10 +40,15 @@ class M_model extends model
 	{
 		return $this->db->table($table)->like($where)->get()->getResult();
 	}
-	public function like_row ($table, $where)
-	{
-		return $this->db->table($table)->like($where)->get()->getRowArray();
-	}
+	public function like_row($table, $where, $key)
+{
+    $query = $this->db->table($table);
+    
+        $query->like($key, '%' . $where . '%');
+    
+    return $query->get()->getRowArray();
+}
+
 
 	public function filter_b ($table,$awal,$akhir)
 	{

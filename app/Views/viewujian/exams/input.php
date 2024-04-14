@@ -26,7 +26,7 @@
                     </button></a>
                     <div class="card">
                         <div class="card-title">
-                            <h4>New Class Form</h4>
+                            <h4>New Exam Form</h4>
 
                         </div>
                         <div class="card-body">
@@ -247,7 +247,7 @@
                 </style>
 
                 <div class="form-group">
-                <textarea id="question_right_answer_${questionCount - 1 }" style="display: block;"  type="text" class="form-control" name="question_right_answer[${questionCount - 1 }]" placeholder="Right Answer" ></textarea>
+                <textarea id="question_right_answer_${questionCount - 1 }"  type="text" class="form-control" name="question_right_answer[${questionCount - 1 }]" placeholder="Right Answer" ></textarea>
                 </div>
                 <div class="form-group">
                 <textarea id="question_answers_${questionCount - 1 }"  type="text" class="form-control" name="question_answers[${questionCount - 1 }][]" placeholder="Other Answer" ></textarea>
